@@ -1,14 +1,14 @@
 <div>
   <h1>
-    Enji Kusnadi
+    Aric Crosson Bouwers
     &middot;
     <img src="https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Fwww.ariccb.dev"/>
-    <img src="https://img.shields.io/github/deployments/enjidev/ariccb.dev/production?label=production&style=flat-square"/>
-    <img src="https://img.shields.io/github/commit-activity/m/enjidev/ariccb.dev?style=flat-square"/>
+    <img src="https://img.shields.io/github/deployments/ariccb/ariccb.dev/production?label=production&style=flat-square"/>
+    <img src="https://img.shields.io/github/commit-activity/m/ariccb/ariccb.dev?style=flat-square"/>
   </h1>
 </div>
 
-A monorepo for my personal website and projects, built with Turborepo and pnpm.
+A monorepo for my personal website and projects, built with Next.js, TypeScript, TailwindCSS, Framer Motion, and MDX.
 
 ## 📘 [ariccb.dev](https://www.ariccb.dev)
 

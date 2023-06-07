@@ -94,7 +94,7 @@ export const getPostStructuredData = ({
     author: [
       {
         '@type': 'Person',
-        name: 'Enji Kusnadi',
+        name: 'Aric Crosson Bouwers',
         jobTitle: 'Front-End Developer',
         url: 'https://www.ariccb.dev/about',
       },
