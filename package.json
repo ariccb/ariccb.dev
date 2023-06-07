@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "install": "cd apps/ariccb.dev && npm install",
-    "start": "cd apps/ariccb.dev && npm run start"
+    "start": "cd apps/ariccb.dev && npm run start",
+    "dev": "cd apps/ariccb.dev && npm run dev"
   },
   "devDependencies": {
     "eslint": "^8.31.0",
