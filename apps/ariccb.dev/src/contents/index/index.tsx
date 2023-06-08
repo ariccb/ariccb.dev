@@ -24,8 +24,8 @@ function FeaturedCardSection() {
               <SparklesIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
-          title="Clean & Intuitive"
-          desc="Keep the UI clean with a modern touch without compromising UX."
+          title="Relentless Learner"
+          desc="Curiosity fuels my never-ending quest for knowledge. I'm always exploring new techniques, tools, and perspectives."
         />
         <FeaturedCard
           icon={
@@ -38,8 +38,8 @@ function FeaturedCardSection() {
               <HeartIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
-          title="Detail Oriented"
-          desc="Awareness to ease of access, UI consistency, and improved UX."
+          title="Team Player · Natural Leader"
+          desc="Working with others, solving problems, and building strong relationships are how I enjoy to work. I quickly earn trust, and I build up those around me so we can all succeed."
         />
         <FeaturedCard
           icon={
@@ -52,8 +52,8 @@ function FeaturedCardSection() {
               <CodeIcon className={clsx('h-5 w-5 text-white')} />
             </div>
           }
-          title="Pretty & Optimized"
-          desc="Writing clean code is a top priority while keeping it as optimized as possible."
+          title="Detail Oriented · Clean Code"
+          desc="Writing well organized and performant code is a top priority. Choose the hard path now, to make tomorrow easier."
         />
       </div>
     </div>

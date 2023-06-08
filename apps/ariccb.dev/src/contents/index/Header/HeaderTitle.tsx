@@ -70,9 +70,10 @@ function HeaderTitle() {
         >
           I&apos;m{' '}
           <strong className={clsx('text-accent-600', 'dark:text-accent-500')}>
-            Enji
+            Aric
           </strong>{' '}
-          Kusnadi,{' '}
+          <br />
+          Crosson Bouwers,{' '}
         </m.span>
         <m.h1
           className={clsx(
@@ -84,17 +85,40 @@ function HeaderTitle() {
           animate={animation.show}
           transition={{ delay: 0.3 }}
         >
-          <span className={clsx('lowercase')}>A</span>{' '}
+          {/* <span className={clsx('lowercase')}>A</span>{' '} */}
           <strong
             className={clsx(
               'font-bold lowercase text-slate-700',
               'dark:text-slate-300'
             )}
           >
-            Front-End Developer
+            Full-Stack Developer &middot;
           </strong>{' '}
-          who loves intuitive,{' '}
-          <span className={clsx('block')}>clean and modern UI design.</span>
+          Passionate, and motivated{' '}
+          <span className={clsx('block')}>
+            by providing{' '}
+            <strong
+              className={clsx(
+                'font-bold lowercase text-yellow-600',
+                'dark:text-yellow-300'
+              )}
+            >
+              value
+            </strong>{' '}
+            to others - while knowing that good design
+          </span>
+          <span className={clsx('block')}>
+            is the{' '}
+            <strong
+              className={clsx(
+                'font-bold lowercase text-yellow-600',
+                'dark:text-yellow-300'
+              )}
+            >
+              key
+            </strong>{' '}
+            to the whole experience.
+          </span>
         </m.h1>
       </span>
     </div>

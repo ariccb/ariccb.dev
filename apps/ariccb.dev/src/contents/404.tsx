@@ -18,10 +18,11 @@ function Error404Contents() {
           <div className={clsx('mb-3 text-8xl font-extrabold')}>404</div>
           <div className={clsx('text-2xl')}> Page Not Found </div>
         </h1>
+        <p>I get lost too sometimes, don't take it personally...</p>
         <Link
           href="/"
           className={clsx(
-            'rounded-xl py-2 px-4 text-xl text-accent-600',
+            'text-accent-600 rounded-xl py-2 px-4 text-xl',
             'dark:text-accent-400'
           )}
         >
