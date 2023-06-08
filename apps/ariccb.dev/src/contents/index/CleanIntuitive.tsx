@@ -48,7 +48,7 @@ function CleanIntuitive() {
 
   return (
     <>
-      <header className={clsx('mb-8')}>
+      <header className={clsx('mb-8')} data-accent="amber">
         <SectionTitle
           title="Eye Catching, Modern & Minimalist Design."
           caption="Clean & Intuitive"

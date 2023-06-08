@@ -65,7 +65,7 @@ function Navbar() {
             </ul>
           </nav>
           <ul className={clsx('flex items-center')}>
-            <li className={clsx('hidden', 'sm:block')}>
+            <li className={clsx('mr-2')}>
               <NavIcon
                 href="https://github.com/ariccb"
                 icon={<GitHubIcon className={clsx('h-5 w-5')} />}

@@ -62,7 +62,7 @@ function QuickAccess() {
             </button>
           </div>
           <div
-            data-accent="violet"
+            data-accent="fuchsia"
             className={clsx(
               'fixed left-2 right-2 bottom-0 top-20 flex flex-col gap-6',
               'sm:left-auto sm:right-6 sm:top-24 sm:w-[320px]'

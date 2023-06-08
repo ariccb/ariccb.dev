@@ -73,7 +73,7 @@ function FooterGroup({ title, links }: FooterGroupProps) {
     <div className={clsx('flex-1')}>
       <div
         className={clsx(
-          'mb-2 px-2 text-[13px] text-slate-600',
+          'text-accent-600 mb-2 px-2 text-[13px]',
           'dark:text-slate-400'
         )}
       >
@@ -173,7 +173,7 @@ function Footer() {
                 'sm:flex-row sm:gap-16 lg:mx-0'
               )}
             >
-              <div className={clsx('flex', 'sm:gap-16')}>
+              <div className={clsx('flex', 'sm:gap-16')} data-accent="accent">
                 <FooterGroup
                   title="Work"
                   links={[

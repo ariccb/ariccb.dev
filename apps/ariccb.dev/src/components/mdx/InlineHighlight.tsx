@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import type { PropsWithChildren } from 'react';
 
 interface InlineHighlightProps {
-  color?: 'accent' | 'blue' | 'violet';
+  color?: 'accent' | 'amber' | 'fuchsia';
 }
 
 export function InlineHighlight({
@@ -13,8 +13,8 @@ export function InlineHighlight({
   return (
     <span
       className={clsx('mdx-inline-highlight', [
-        color === 'blue' && 'blue',
-        color === 'violet' && 'violet',
+        color === 'amber' && 'amber',
+        color === 'fuchsia' && 'fuchsia',
       ])}
     >
       {children}

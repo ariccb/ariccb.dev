@@ -31,7 +31,7 @@ function FeaturedCardSection() {
           icon={
             <div
               className={clsx(
-                'rounded-full bg-pink-300 p-3.5',
+                'rounded-full bg-amber-400 p-3.5',
                 'dark:bg-pink-900'
               )}
             >
@@ -45,7 +45,7 @@ function FeaturedCardSection() {
           icon={
             <div
               className={clsx(
-                'rounded-full bg-sky-300 p-3.5',
+                'rounded-full bg-orange-400 p-3.5',
                 'dark:bg-sky-900'
               )}
             >
@@ -62,7 +62,7 @@ function FeaturedCardSection() {
 
 function QuoteSection() {
   return (
-    <div className={clsx('content-wrapper')}>
+    <div className={clsx('content-wrapper', 'mb:hidden')}>
       <div className={clsx('flex items-center justify-center py-8')}>
         <Quote />
       </div>
@@ -74,10 +74,13 @@ function IndexContents() {
   return (
     <>
       <Header />
-      <div className={clsx('hidden', 'lg:-mt-16 lg:mb-24 lg:block')}>
+      <div className={clsx('lg:-mt-16 lg:mb-24 lg:block')}>
         <FeaturedCardSection />
       </div>
-      <div className={clsx('-mt-12 mb-12', 'md:mt-0 md:mb-24')}>
+      <br />
+      <div
+        className={clsx('max-sm:hidden', '-mt-12 mb-12', 'md:mt-0 md:mb-24')}
+      >
         <QuoteSection />
       </div>
       <section className={clsx('mb-12', 'lg:mb-24')}>

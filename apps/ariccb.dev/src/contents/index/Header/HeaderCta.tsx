@@ -24,7 +24,11 @@ function ButtonContactMe() {
   return (
     <Link
       href="/work/contact"
-      className={clsx('button button--solid min-w-[128px]', 'md:button--big')}
+      className={clsx(
+        'button button--solid min-w-[128px]',
+        'shadow',
+        'md:button--big'
+      )}
     >
       Get in Touch
     </Link>
@@ -37,7 +41,10 @@ function ButtonResume() {
       target="_blank"
       rel="noreferrer nofollow"
       href="https://www.figma.com/file/U2lKYq1sqdDMz7qWNLIa4T/Resume?type=design&node-id=0%3A1&t=jWkydbczHnA1bLkG-1"
-      className={clsx('button button--ghost px-2', 'md:button--big md:px-2')}
+      className={clsx(
+        'button button--ghost px-2 text-fuchsia-600',
+        'md:button--big md:px-2'
+      )}
     >
       <DocumentIcon className={clsx('h-5 w-5')} />
       RESUME

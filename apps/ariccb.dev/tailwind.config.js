@@ -36,6 +36,9 @@ module.exports = {
           },
         },
       },
+      boxShadow: {
+        '3xl': '0 35px 60px -15px rgba(34,211,238)',
+      },
     },
   },
   plugins: [
@@ -56,7 +59,7 @@ module.exports = {
     },
     require('@headlessui/tailwindcss'),
     require('tailwindcss-accent')({
-      colors: ['amber', 'violet'],
+      colors: ['amber', 'fuchsia'],
       root: 'amber',
     }),
   ],

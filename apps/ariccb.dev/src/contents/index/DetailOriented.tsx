@@ -4,7 +4,7 @@ import SectionTitle from '@/components/sections/SectionTitle';
 
 function DetailOriented() {
   return (
-    <header className={clsx('mb-8')}>
+    <header className={clsx('mb-8')} data-accent="amber">
       <SectionTitle
         title="Keen Eye for Spotting Small Details."
         caption="Detail Oriented"

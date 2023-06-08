@@ -4,7 +4,7 @@ import SectionTitle from '@/components/sections/SectionTitle';
 
 function PrettyOptimized() {
   return (
-    <header className={clsx('mb-8')}>
+    <header className={clsx('mb-8')} data-accent="amber">
       <SectionTitle
         title="Comprehensible and Optimized Code."
         caption="Pretty & Optimized"
