@@ -13,7 +13,7 @@ import dayjs from '@/utils/dayjs';
 function LastUpdate() {
   return (
     <a
-      href="https://github.com/enjidev/ariccb.dev"
+      href="https://github.com/ariccb/ariccb.dev"
       target="_blank"
       rel="noreferrer nofollow"
       className={clsx('hover:underline')}
