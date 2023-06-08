@@ -1,12 +1,7 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 
-import {
-  ExternalLink,
-  FigmaIcon,
-  GitHubIcon,
-  TwitterIcon,
-} from '@/components/Icons';
+import { ExternalLink, GitHubIcon } from '@/components/Icons';
 
 import dayjs from '@/utils/dayjs';
 
@@ -114,7 +109,7 @@ function FooterDescription() {
       <p className={clsx('mb-4 font-normal leading-relaxed')}>
         I&apos;m Aric, a <strong>full-stack developer.</strong>
         <br />I am a natural learner, and love working with people. Eye for
-        design. Creative mind. I'm here for the <strong>fun.</strong>
+        design. Creative mind. I&apos;m here for the <strong>fun.</strong>
       </p>
       <ul className={clsx('-ml-2 flex gap-1')}>
         {/* <li>

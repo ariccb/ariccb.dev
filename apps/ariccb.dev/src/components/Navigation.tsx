@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { GitHubIcon, TwitterIcon } from '@/components/Icons';
+import { GitHubIcon } from '@/components/Icons';
 import NavIcon from '@/components/navigations/NavIcon';
 import NavIconQuickAccess from '@/components/navigations/NavIconQuickAccess';
 import NavLink from '@/components/navigations/NavLink';
@@ -65,7 +65,6 @@ function Navbar() {
             </ul>
           </nav>
           <ul className={clsx('flex items-center')}>
-            <li className={clsx('hidden', 'sm:block')}></li>
             <li className={clsx('hidden', 'sm:block')}>
               <NavIcon
                 href="https://github.com/ariccb"
