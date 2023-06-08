@@ -1,14 +1,19 @@
 {
   "private": true,
   "scripts": {
-    "install": "cd apps/ariccb.dev && npm install",
-    "start": "cd apps/ariccb.dev && npm run start",
-    "dev": "cd apps/ariccb.dev && npm run dev",
-    "build": "cd apps/ariccb.dev && npm run build"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "format": "prettier --write .",
+    "start": "cd apps/ariccb.dev && pnpm run start"
   },
   "devDependencies": {
     "eslint": "^8.31.0",
     "prettier": "^2.8.1",
-    "prettier-plugin-tailwindcss": "^0.2.1"
-  }
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "turbo": "latest",
+    "next": "^13.1.1"
+  },
+  "packageManager": "pnpm@7.22.0"
 }
