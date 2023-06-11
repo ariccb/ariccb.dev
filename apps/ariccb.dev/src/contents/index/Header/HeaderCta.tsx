@@ -42,7 +42,7 @@ function ButtonResume() {
       rel="noreferrer nofollow"
       href="https://www.figma.com/file/U2lKYq1sqdDMz7qWNLIa4T/Resume?type=design&node-id=0%3A1&t=jWkydbczHnA1bLkG-1"
       className={clsx(
-        'button button--ghost px-2 text-fuchsia-600',
+        'button button--ghost px-2 text-amber-600',
         'md:button--big md:px-2'
       )}
     >
@@ -64,7 +64,7 @@ function AvailableForHire() {
       <span className={clsx('relative flex h-2 w-2')}>
         <span
           className={clsx(
-            'bg-accent-600 absolute -top-1 -left-1 inline-flex h-4 w-4 animate-ping rounded-full opacity-75',
+            'bg-accent-600 absolute -left-1 -top-1 inline-flex h-4 w-4 animate-ping rounded-full opacity-75',
             'dark:bg-accent-300'
           )}
         />
@@ -132,7 +132,7 @@ function HeaderCta({
             <AvailableForHire />
           </m.div>
           <m.div
-            className={clsx('absolute top-0 left-0')}
+            className={clsx('absolute left-0 top-0')}
             initial={{ x: -48, opacity: 0, pointerEvents: 'none' }}
             animate={{ x: 0, opacity: 1, pointerEvents: 'auto' }}
             transition={{ delay: isFreeAnimationDuration + 1.6, duration: 0.4 }}
