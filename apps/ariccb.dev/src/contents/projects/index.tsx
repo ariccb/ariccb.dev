@@ -14,7 +14,7 @@ function ProjectsContents() {
 
   return (
     <>
-      <SectionTitle
+      {/* <SectionTitle
         title="The dynamic accent colors."
         caption="tailwindcss-accent"
         description="Add accent colors for dynamic, flexible color use in your Tailwind CSS project."
@@ -81,7 +81,7 @@ function ProjectsContents() {
             </div>
           </div>
         </div>
-      </SectionContent>
+      </SectionContent> */}
     </>
   );
 }
