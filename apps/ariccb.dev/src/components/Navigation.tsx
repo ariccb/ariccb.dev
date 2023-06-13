@@ -11,9 +11,13 @@ import NavLogo from '@/components/navigations/NavLogo';
 import useOnScroll from '@/hooks/useOnScroll';
 
 const workLinks = [
-  { title: 'Skills & Tools', href: '/work/skills-and-tools' },
-  { title: 'Experience', href: '/work/experience' },
-  { title: 'Studio', href: '/work/studio' },
+  // { title: 'Skills & Tools', href: '/work/skills-and-tools' },
+  // { title: 'Experience', href: '/work/experience' },
+  // { title: 'Studio', href: '/work/studio' },
+  // { title: 'Contact', href: '/work/contact' },
+  { title: 'Skills & Tools (wip)', href: '/wip' },
+  { title: 'Experience (wip)', href: '/wip' },
+  { title: 'Studio (wip)', href: '/wip' },
   { title: 'Contact', href: '/work/contact' },
 ];
 
@@ -22,7 +26,7 @@ function Navbar() {
 
   return (
     <header
-      className={clsx('fixed top-0 right-0 left-0 z-[1000]', 'fm:absolute')}
+      className={clsx('fixed left-0 right-0 top-0 z-[1000]', 'fm:absolute')}
     >
       <div
         className={clsx(
@@ -48,7 +52,7 @@ function Navbar() {
             <NavLogo href="/" title="Home" />
             <ul className={clsx('flex items-center', 'md:gap-1')}>
               <li>
-                <NavLink title="Projects" href="/projects" />
+                <NavLink title="Projects (wip)" href="/projects" />
               </li>
               {/* <li>
                 <NavLink title="Blog" href="/blog" />
