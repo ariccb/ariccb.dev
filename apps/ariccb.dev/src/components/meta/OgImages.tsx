@@ -148,10 +148,10 @@ export function PostOgImage({
         <img
           width="48"
           height="48"
-          src="https://github.com/enjidev.png?size=48"
+          src="https://dsm04pap003files.storage.live.com/y4m-YD41WTmBW0aqCKIx6wLnBur8b2a8CzgU01WtB4CwEbOI9sx3PUJipSi3s-pJgrbXyV3Yk91DzcpRQ1iSPdJ7ie8Cu_qEMzB2yHt7R_X2KITj85gNvjhl9lbdQIb2SVoaJHUzKyC94c9i_AcJI8-yvzaQAA6Mi4Md3CJGanQFjrDfueT1jnrU2zJ8fly-o_v?width=192&height=256&cropmode=none"
           style={styles.authorAvatar}
         />
-        <div style={styles.authorName}>@enjidev</div>
+        <div style={styles.authorName}>@ariccb.dev</div>
 
         {date && (
           <>
@@ -214,10 +214,10 @@ export function PageOgImage({
         <img
           width="48"
           height="48"
-          src="https://github.com/enjidev.png?size=48"
+          src="https://dsm04pap003files.storage.live.com/y4m-YD41WTmBW0aqCKIx6wLnBur8b2a8CzgU01WtB4CwEbOI9sx3PUJipSi3s-pJgrbXyV3Yk91DzcpRQ1iSPdJ7ie8Cu_qEMzB2yHt7R_X2KITj85gNvjhl9lbdQIb2SVoaJHUzKyC94c9i_AcJI8-yvzaQAA6Mi4Md3CJGanQFjrDfueT1jnrU2zJ8fly-o_v?width=192&height=256&cropmode=none"
           style={styles.authorAvatar}
         />
-        <div style={styles.authorName}>@enjidev</div>
+        <div style={styles.authorName}>@ariccb.dev</div>
       </div>
       <div
         style={

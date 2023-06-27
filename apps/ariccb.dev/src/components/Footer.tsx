@@ -114,7 +114,7 @@ function FooterDescription() {
       <ul className={clsx('-ml-2 flex gap-1')}>
         {/* <li>
           <a
-            href="https://twitter.com/enjidev"
+            href="https://twitter.com/ariccb.dev"
             target="_blank"
             rel="noreferrer nofollow"
             className={clsx('flex h-9 w-9 items-center justify-center')}
@@ -178,23 +178,28 @@ function Footer() {
                   title="Work"
                   links={[
                     { title: 'Contact', href: '/work/contact' },
-                    { title: 'Experience', href: '/work/experience' },
-                    // {
-                    //   title: 'Services',
-                    //   href: '/work/services',
-                    //   label: 'soon',
-                    // },
+
+                    {
+                      title: 'Experience',
+                      href: '/work/experience',
+                      label: 'soon',
+                    },
                     {
                       title: 'Skills and Tools',
                       href: '/work/skills-and-tools',
                       label: 'soon',
                     },
-                    // { title: 'Studio', href: '/work/studio' },
+                    { title: 'Studio', href: '/work/studio', label: 'soon' },
                   ]}
                 />
                 <FooterGroup
                   title="Learn"
                   links={[
+                    {
+                      title: 'Projects',
+                      href: '/work/projects',
+                      label: 'soon',
+                    },
                     // {
                     //   title: 'Docs',
                     //   href: '/docs',
