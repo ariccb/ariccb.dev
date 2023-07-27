@@ -23,3 +23,5 @@ A personal website with a blog, project showcase, and work information.
 - ✍ MDX
 
 [FIND OUT MORE →](apps/ariccb.dev)
+
+Special Thanks to Enji for providing an opensource portfolio template! Check his github out - https://github.com/enjidev
