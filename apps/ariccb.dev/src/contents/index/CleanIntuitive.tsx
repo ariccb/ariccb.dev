@@ -18,26 +18,26 @@ type Content = {
 
 const content: Array<Content> = [
   {
-    state: 'typography',
-    shows: ['typography'],
-    title: 'Typography',
-    description: 'Selecting the font type, font size, and font weight.',
+    state: 'professional-skills',
+    shows: ['professional-skills'],
+    title: 'Professional Skills',
+    description: 'Important skills that compliment any position.',
   },
   {
     state: 'spacing',
-    shows: ['typography', 'spacing'],
+    shows: ['professional-skills', 'spacing'],
     title: 'Spacing',
     description: 'Positioning and adding spacing between elements.',
   },
   {
     state: 'colors',
-    shows: ['typography', 'spacing', 'colors'],
+    shows: ['professional-skills', 'spacing', 'colors'],
     title: 'Colors',
     description: 'Choosing a color scheme with sufficient contrast.',
   },
   {
     state: 'effects',
-    shows: ['typography', 'spacing', 'colors', 'effects'],
+    shows: ['professional-skills', 'spacing', 'colors', 'effects'],
     title: 'Effects',
     description: 'Add effects like borders, shadows, rounded corners, etc.',
   },
@@ -83,7 +83,7 @@ function CleanIntuitive() {
                   state={
                     currentState
                       ? currentState.shows
-                      : ['typography', 'spacing', 'colors', 'effects']
+                      : ['professional-skills', 'spacing', 'colors', 'effects']
                   }
                 />
               </div>
@@ -92,7 +92,7 @@ function CleanIntuitive() {
                   state={
                     currentState
                       ? currentState.shows
-                      : ['typography', 'spacing', 'colors', 'effects']
+                      : ['professional-skills', 'spacing', 'colors', 'effects']
                   }
                   title="UI Implementation"
                   description="Start creating UI components using React and Tailwind CSS."

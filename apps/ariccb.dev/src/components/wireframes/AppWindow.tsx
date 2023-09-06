@@ -21,7 +21,7 @@ function BrowserTab({ icon, title, isActive }: BrowserTabProps) {
             ]
           : ['bg-slate-200/50 text-slate-500', 'dark:bg-slate-100/5'],
       ])}
-      style={{ width: 200 }}
+      style={{ width: 220 }}
     >
       <div className={clsx('flex w-full gap-2 px-2 text-xs')}>
         {icon}
@@ -47,7 +47,7 @@ function AppWindow({
     <div
       role="presentation"
       className={clsx(
-        'border-divider-light pointer-events-none flex h-full w-full select-none flex-col overflow-hidden rounded-xl border bg-white',
+        'border-divider-light pointer-events-none flex h-full w-full select-none flex-col content-stretch overflow-hidden rounded-xl border bg-white',
         'dark:border-divider-dark dark:bg-[#0c1222]'
       )}
     >
