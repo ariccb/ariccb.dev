@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { m, useReducedMotion } from 'framer-motion';
 import Link from 'next/link';
+import AccentDemo from '@/components/mdx/AccentDemo';
 
 import { DocumentIcon } from '@/components/Icons';
 
@@ -32,6 +33,19 @@ function ButtonContactMe() {
     >
       Get in Touch
     </Link>
+  );
+}
+
+function ChangeColor() {
+  return (
+    <a
+      className={clsx(
+        'button button--ghost px-2 text-amber-600',
+        'md:button--big md:px-2'
+      )}
+    >
+      <AccentDemo />
+    </a>
   );
 }
 
@@ -118,6 +132,7 @@ function HeaderCta({
         transition={{ delay: 0.4 }}
       >
         <ButtonContactMe />
+        <ChangeColor />
       </m.div>
       {isFree ? (
         <m.div
@@ -141,8 +156,10 @@ function HeaderCta({
           </m.div>
         </m.div>
       ) : (
-        <m.div variants={animation} transition={{ delay: 0.5 }}>
-          <ButtonResume />
+        <m.div>
+          <m.div variants={animation} transition={{ delay: 0.5 }}>
+            <ButtonResume />
+          </m.div>
         </m.div>
       )}
     </m.div>

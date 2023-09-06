@@ -2,9 +2,16 @@ import clsx from 'clsx';
 import { useState } from 'react';
 
 function AccentDemo() {
-  const accents = ['violet', 'red', 'blue', 'orange', 'green', 'pink'] as const;
+  const accents = [
+    'violet',
+    'red',
+    'amber',
+    'orange',
+    'green',
+    'pink',
+  ] as const;
 
-  const [accent, setAccent] = useState<typeof accents[number]>('violet');
+  const [accent, setAccent] = useState<(typeof accents)[number]>('default');
 
   const handleClick = () => {
     const newAccent = accents[accents.indexOf(accent) + 1] || accents[0];
@@ -16,22 +23,22 @@ function AccentDemo() {
     setAccent(newAccent);
   };
 
-  const getButtonText = (color: typeof accents[number]): string => {
+  const getButtonText = (color: (typeof accents)[number]): string => {
     switch (color) {
       case 'violet':
-        return `This is perfect 👌`;
+        return `How do you like some Violet? 🤔`;
       case 'red':
-        return `I look brave, don't I? 😡`;
-      case 'blue':
-        return `This is good 🤩`;
+        return `How about some Red? 😡`;
+      case 'amber':
+        return `Amber's good 🤩`;
       case 'orange':
-        return `Are you serious? 👀`;
+        return `Orange for you? 👀`;
       case 'green':
-        return `Ah green, not bad 😁`;
+        return `Ah green, nice choice! 😁`;
       case 'pink':
-        return `Okay, bring me back to violet! 😭`;
+        return `Pink! 🌸`;
       default:
-        return `Change the accent color!`;
+        return `Don't Like My Accent Colour? 🙃`;
     }
   };
 

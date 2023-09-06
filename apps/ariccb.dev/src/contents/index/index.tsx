@@ -8,6 +8,7 @@ import FeaturedCard from '@/contents/index/FeaturedCard';
 import Header from '@/contents/index/Header';
 import PrettyOptimized from '@/contents/index/PrettyOptimized';
 import Quote from '@/contents/index/Quote';
+import AccentDemo from '@/components/mdx/AccentDemo';
 
 function FeaturedCardSection() {
   return (
@@ -79,7 +80,7 @@ function IndexContents() {
       </div>
       <br />
       <div
-        className={clsx('max-sm:hidden', '-mt-12 mb-12', 'md:mt-0 md:mb-24')}
+        className={clsx('max-sm:hidden', '-mt-12 mb-12', 'md:mb-24 md:mt-0')}
       >
         <QuoteSection />
       </div>
