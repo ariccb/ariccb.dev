@@ -54,7 +54,8 @@ function ButtonResume() {
     <a
       target="_blank"
       rel="noreferrer nofollow"
-      href="https://www.figma.com/file/U2lKYq1sqdDMz7qWNLIa4T/Resume?type=design&node-id=0%3A1&t=jWkydbczHnA1bLkG-1"
+      href="apps/ariccb.dev/src/assets/resumes/full-stack-dev_Aric_CrossonBouwers_Resume.pdf"
+      download
       className={clsx(
         'button button--ghost px-2 text-amber-600',
         'md:button--big md:px-2'
