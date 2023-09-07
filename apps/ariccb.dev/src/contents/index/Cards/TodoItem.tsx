@@ -1,8 +1,10 @@
 import clsx from 'clsx';
 
-import { CalendarIcon } from '@/components/Icons';
-
-export type TodoItemState = 'spacing' | 'typography' | 'colors' | 'effects';
+export type TodoItemState =
+  | 'traits'
+  | 'professional-skills'
+  | 'interests'
+  | 'values';
 
 interface TodoItemProps {
   state: Array<TodoItemState>;
@@ -11,163 +13,177 @@ interface TodoItemProps {
   date?: string;
   tag1?: string;
   tag2?: string;
+  tag3?: string;
+  tag4?: string;
+  tag5?: string;
+  tag6?: string;
+  tag7?: string;
+  tag8?: string;
+  tag9?: string;
+  tag10?: string;
 }
 
 function TodoItem({
   state,
-  title = 'Create Documentations',
-  description = 'It is good to create early documentation for our new library.',
-  date = '10:00 AM · Tomorrow',
-  tag1 = 'Docs',
-  tag2 = 'Support',
+  title,
+  description,
+  tag1,
+  tag2,
+  tag3,
+  tag4,
+  tag5,
+  tag6,
+  tag7,
+  tag8,
+  tag9,
+  tag10,
 }: TodoItemProps) {
   return (
     <div
       className={clsx(
         'pointer-events-none w-full select-none border p-6',
         'lg:w-96',
-        state.includes('effects') && ['rounded-xl '],
-        state.includes('spacing') && [''],
-        state.includes('typography') ? ['text-sm'] : ['font-serif'],
-        state.includes('colors')
-          ? [
-              'border-divider-light bg-white',
-              'dark:border-divider-dark dark:bg-slate-900',
-            ]
-          : ['border-black bg-white', 'dark:border-white dark:bg-[#050914]']
+        'rounded-xl'
       )}
       role="presentation"
     >
       <div
-        className={clsx(
-          'flex items-center',
-          state.includes('spacing') && ['mb-4 justify-between']
-        )}
+        className={clsx(['text-slate-700', 'dark:text-slate-300'], 'font-bold')}
       >
-        <div className={clsx('flex')}>
-          <div
-            className={clsx(
-              'relative flex h-8 w-8 items-center justify-center',
-              state.includes('effects') && ['rounded-full'],
-              state.includes('spacing') && [''],
-              state.includes('typography') && ['font-bold'],
-              state.includes('colors')
-                ? ['border-white bg-sky-400 text-white']
-                : [
-                    'border-white bg-[#050914] text-white',
-                    'dark:bg-white dark:text-black',
-                  ]
-            )}
-          >
-            E
-          </div>
-        </div>
-        <div
-          className={clsx(
-            state.includes('effects') && ['rounded-full'],
-            state.includes('spacing') && ['px-2 py-0.5'],
-            state.includes('typography') && ['text-xs font-bold'],
-            state.includes('colors')
-              ? [
-                  'bg-red-100 text-red-800',
-                  'dark:bg-red-500/20 dark:text-red-300',
-                ]
-              : ['bg-[#ff0000] text-white']
-          )}
-        >
-          High
-        </div>
+        {title}:
       </div>
-      <div
-        className={clsx(
-          state.includes('spacing') && ['mb-1'],
-          state.includes('typography') && ['text-lg font-bold'],
-          state.includes('colors')
-            ? ['text-slate-700', 'dark:text-slate-300']
-            : ['text-black', 'dark:text-white']
-        )}
-      >
-        {title}
-      </div>
-      <div
-        className={clsx(
-          state.includes('spacing') && ['mb-4'],
-          state.includes('typography') && [''],
-          state.includes('colors')
-            ? ['text-slate-600', 'dark:text-slate-400']
-            : ['text-black', 'dark:text-white']
-        )}
-      >
+      <div className={clsx(['text-slate-600', 'dark:text-slate-400'])}>
         {description}
       </div>
       <div
         className={clsx(
           'flex',
-          state.includes('spacing') && ['mb-6 gap-2'],
-          state.includes('typography') && ['text-xs font-bold'],
-          state.includes('colors') && ['']
+          'flex-wrap',
+          ['m-3 gap-2'],
+          ['text-xs font-bold']
         )}
       >
-        <div
-          className={clsx(
-            state.includes('effects') && ['rounded-full'],
-            state.includes('spacing') && ['px-2 py-0.5'],
-            state.includes('typography') && [''],
-            state.includes('colors')
-              ? [
-                  'bg-blue-100 text-blue-700',
-                  'dark:bg-blue-500/20 dark:text-blue-300',
-                ]
-              : ['bg-[#0000ff] text-white']
-          )}
-        >
-          {tag1}
-        </div>
-        <div
-          className={clsx(
-            state.includes('effects') && ['rounded-full'],
-            state.includes('spacing') && ['px-2 py-0.5'],
-            state.includes('typography') && [''],
-            state.includes('colors')
-              ? [
-                  'bg-yellow-100 text-yellow-700',
-                  'dark:bg-yellow-500/20 dark:text-yellow-300',
-                ]
-              : ['bg-[#ffff00] text-black']
-          )}
-        >
-          {tag2}
-        </div>
-      </div>
-      <div
-        className={clsx(
-          'flex items-center',
-          state.includes('spacing') && ['gap-1 '],
-          state.includes('typography') && ['text-xs font-medium'],
-          state.includes('colors') && ['']
-        )}
-      >
-        <CalendarIcon
-          className={clsx(
-            'h-4 w-4',
-            state.includes('spacing') && ['-mt-1'],
-            state.includes('typography') && [''],
-            state.includes('colors')
-              ? ['text-slate-400', 'dark:text-slate-600']
-              : ['h-4 w-4 text-black', 'dark:text-white']
-          )}
-        />
-        <div
-          className={clsx(
-            state.includes('spacing') && [''],
-            state.includes('typography') && [''],
-            state.includes('colors')
-              ? ['text-slate-600', 'dark:text-slate-400']
-              : ['text-black', 'dark:text-white']
-          )}
-        >
-          {date}
-        </div>
+        {' '}
+        {tag1 != '' ? (
+          <div
+            className={clsx(
+              'rounded-full',
+              ['px-3 py-2'],
+              'bg-accent-200 text-accent-700',
+              'dark:bg-accent-600/20 dark:text-accent-400'
+            )}
+          >
+            {tag1}
+          </div>
+        ) : null}
+        {tag2 != '' ? (
+          <div
+            className={clsx(
+              'rounded-full',
+              ['px-3 py-2'],
+              'bg-accent-200 text-accent-700',
+              'dark:bg-accent-600/20 dark:text-accent-400'
+            )}
+          >
+            {tag2}
+          </div>
+        ) : null}
+        {tag3 != '' ? (
+          <div
+            className={clsx(
+              'rounded-full',
+              ['px-3 py-2'],
+              'bg-accent-200 text-accent-700',
+              'dark:bg-accent-600/20 dark:text-accent-400'
+            )}
+          >
+            {tag3}
+          </div>
+        ) : null}
+        {tag4 != '' ? (
+          <div
+            className={clsx(
+              'rounded-full',
+              ['px-3 py-2'],
+              'bg-accent-200 text-accent-700',
+              'dark:bg-accent-600/20 dark:text-accent-400'
+            )}
+          >
+            {tag4}
+          </div>
+        ) : null}
+        {tag5 != '' ? (
+          <div
+            className={clsx(
+              'rounded-full',
+              ['px-3 py-2'],
+              'bg-accent-200 text-accent-700',
+              'dark:bg-accent-600/20 dark:text-accent-400'
+            )}
+          >
+            {tag5}
+          </div>
+        ) : null}
+        {tag6 != '' ? (
+          <div
+            className={clsx(
+              'rounded-full',
+              ['px-3 py-2'],
+              'bg-accent-200 text-accent-700',
+              'dark:bg-accent-600/20 dark:text-accent-400'
+            )}
+          >
+            {tag6}
+          </div>
+        ) : null}
+        {tag7 != '' ? (
+          <div
+            className={clsx(
+              'rounded-full',
+              ['px-3 py-2'],
+              'bg-accent-200 text-accent-700',
+              'dark:bg-accent-600/20 dark:text-accent-400'
+            )}
+          >
+            {tag7}
+          </div>
+        ) : null}
+        {tag8 != '' ? (
+          <div
+            className={clsx(
+              'rounded-full',
+              ['px-3 py-2'],
+              'bg-accent-200 text-accent-700',
+              'dark:bg-accent-600/20 dark:text-accent-400'
+            )}
+          >
+            {tag8}
+          </div>
+        ) : null}
+        {tag9 != '' ? (
+          <div
+            className={clsx(
+              'rounded-full',
+              ['px-3 py-2'],
+              'bg-accent-200 text-accent-700',
+              'dark:bg-accent-600/20 dark:text-accent-400'
+            )}
+          >
+            {tag9}
+          </div>
+        ) : null}
+        {tag10 != '' ? (
+          <div
+            className={clsx(
+              'rounded-full',
+              ['px-3 py-2'],
+              'bg-accent-200 text-accent-700',
+              'dark:bg-accent-600/20 dark:text-accent-400'
+            )}
+          >
+            {tag10}
+          </div>
+        ) : null}
       </div>
     </div>
   );

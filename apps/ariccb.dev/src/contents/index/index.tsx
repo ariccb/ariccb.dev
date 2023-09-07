@@ -2,13 +2,14 @@ import clsx from 'clsx';
 
 import { CodeIcon, HeartIcon, SparklesIcon } from '@/components/Icons';
 
-import CleanIntuitive from '@/contents/index/CleanIntuitive';
+import WhoIAm from '@/contents/index/WhoIAm';
 import DetailOriented from '@/contents/index/DetailOriented';
 import FeaturedCard from '@/contents/index/FeaturedCard';
 import Header from '@/contents/index/Header';
 import PrettyOptimized from '@/contents/index/PrettyOptimized';
 import Quote from '@/contents/index/Quote';
 import AccentDemo from '@/components/mdx/AccentDemo';
+import KeyStrengths from '@/contents/index/KeyStrengths';
 
 function FeaturedCardSection() {
   return (
@@ -84,10 +85,13 @@ function IndexContents() {
       >
         <QuoteSection />
       </div>
-      <section className={clsx('mb-12', 'lg:mb-24')}>
-        <CleanIntuitive />
+      <section className={clsx('mb-10', 'lg:mb-24')}>
+        <WhoIAm />
       </section>
-      <section className={clsx('mb-12', 'lg:mb-24')}>
+      <section className={clsx('mb-6', 'lg:mb-10')}>
+        <KeyStrengths />
+      </section>
+      <section className={clsx('mb-12', 'lg:mb-20')}>
         <DetailOriented />
       </section>
       <section className={clsx('mb-12', 'lg:mb-24')}>
