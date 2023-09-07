@@ -59,7 +59,7 @@ module.exports = {
     },
     require('@headlessui/tailwindcss'),
     require('tailwindcss-accent')({
-      colors: ['amber', 'fuchsia'],
+      colors: ['amber', 'violet'],
       root: 'amber',
     }),
   ],

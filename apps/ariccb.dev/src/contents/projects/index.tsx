@@ -1,16 +1,20 @@
 import clsx from 'clsx';
 import { useState } from 'react';
 
-import { GitHubIcon, NpmIcon } from '@/components/Icons';
+import { GitHubIcon, UnstuckIcon } from '@/components/Icons';
 import { SectionButton } from '@/components/sections/SectionButton';
 import SectionContent from '@/components/sections/SectionContent';
 import SectionTitle from '@/components/sections/SectionTitle';
 import AppWindow from '@/components/wireframes/AppWindow';
 import GitHubWireframe from '@/components/wireframes/GitHub';
-// import NpmWireframe from '@/components/wireframes/Npm';
+import Link from 'next/link';
+import Image from 'next/image';
+import LandingPageImg from '@/components/images/unstuck-landingpage.png';
 
 function ProjectsContents() {
-  const [currentState, setCurrentState] = useState<'npm' | 'github'>('github');
+  const [currentState, setCurrentState] = useState<'unstuck' | 'github'>(
+    'github'
+  );
 
   return (
     <>
@@ -22,12 +26,17 @@ function ProjectsContents() {
           title: 'learn more',
           href: '/docs/unstuck',
         }}
+        button2={{
+          title: 'Github Repo',
+          href: 'https://github.com/ariccb/unstuck',
+        }}
       />
 
       <SectionContent>
         <div className={clsx('flex', 'lg:gap-12')}>
           <div className={clsx('hidden flex-1 flex-col gap-3 pt-8', 'lg:flex')}>
             <div className={clsx('flex flex-col gap-3')}>
+              {/* <Link href={'https://github.com/ariccb/unstuck'}> */}
               <SectionButton
                 title="Source code on GitHub"
                 icon={<GitHubIcon className={clsx('my-2 h-16 w-16')} />}
@@ -37,13 +46,14 @@ function ProjectsContents() {
                   setCurrentState('github');
                 }}
               />
-              {/* <SectionButton
-                title="npm package"
-                icon={<NpmIcon className={clsx('my-2 h-16 w-16')} />}
+              {/* </Link> */}
+              <SectionButton
+                title="Unstuck"
+                icon={<UnstuckIcon className={clsx('my-2 h-16 w-16')} />}
                 description="Install and use the package with ease thanks to its typed options."
-                active={currentState === 'npm'}
-                onClick={() => setCurrentState('npm')}
-              /> */}
+                active={currentState === 'unstuck'}
+                onClick={() => setCurrentState('unstuck')}
+              />
             </div>
           </div>
           <div className={clsx('w-full', 'lg:w-auto')}>
@@ -57,11 +67,11 @@ function ProjectsContents() {
                       title: 'ariccb/unstuck - GitHub',
                       isActive: currentState === 'github',
                     },
-                    // {
-                    //   icon: <NpmIcon className="h-4 w-4" />,
-                    //   title: 'tailwindcss-accent - npm',
-                    //   isActive: currentState === 'npm',
-                    // },
+                    {
+                      icon: <UnstuckIcon className="h-4 w-4" />,
+                      title: 'www.unstuck.app - Unstuck',
+                      isActive: currentState === 'unstuck',
+                    },
                   ]}
                 >
                   {currentState === 'github' && (
@@ -72,13 +82,16 @@ function ProjectsContents() {
                       description="Platform for students to get experience through real-world projects to gain a greater understanding of their skills/talents/interests/personality traits."
                     />
                   )}
-                  {/* {currentState === 'npm' && (
-                    <NpmWireframe
-                      packageName="tailwindcss-accent"
-                      description="Adds accent colors for more dynamic and flexible color utilization."
-                      isWithTypeScript
+                  {currentState === 'unstuck' && (
+                    //insert image UnstuckLandingPageImage
+                    <Image
+                      src={LandingPageImg}
+                      // width={500}
+                      // height={500}
+                      alt="Unstuck Landing Page"
+                      placeholder="blur" // Optional blur-up while loading
                     />
-                  )} */}
+                  )}
                 </AppWindow>
               </div>
             </div>
@@ -90,8 +103,8 @@ function ProjectsContents() {
         caption="Connecting Passion With Purpose"
         description="A full-stack application that connects passionate individuals with volunteering opportunities in the city, matching them up based on values and purpose."
         button={{
-          title: 'view back-end code',
-          href: 'https://github.com/ariccb/connect-cause-backend',
+          title: 'learn more',
+          href: '/docs/connect-cause',
         }}
         button2={{
           title: 'view front-end code',
@@ -102,21 +115,34 @@ function ProjectsContents() {
         <div className={clsx('flex', 'lg:gap-12')}>
           <div className={clsx('hidden flex-1 flex-col gap-3 pt-8', 'lg:flex')}>
             <div className={clsx('flex flex-col gap-3')}>
-              <SectionButton
-                title="Source code on GitHub"
-                icon={<GitHubIcon className={clsx('my-2 h-16 w-16')} />}
-                description=""
-                active={currentState === 'github'}
-                onClick={() => {
-                  setCurrentState('github');
-                }}
-              />
+              <Link href={'https://github.com/ariccb/connect-cause-backend'}>
+                <SectionButton
+                  title="Backend source code on GitHub"
+                  icon={<GitHubIcon className={clsx('my-2 h-16 w-16')} />}
+                  description=""
+                  active={currentState === 'github'}
+                  onClick={() => {
+                    setCurrentState('github');
+                  }}
+                />
+              </Link>
+              <Link href={'https://github.com/ariccb/connect-cause-frontend'}>
+                <SectionButton
+                  title="Frontend source code on GitHub"
+                  icon={<GitHubIcon className={clsx('my-2 h-16 w-16')} />}
+                  description=""
+                  active={currentState === 'github'}
+                  onClick={() => {
+                    setCurrentState('github');
+                  }}
+                />
+              </Link>
               {/* <SectionButton
                 title="npm package"
-                icon={<NpmIcon className={clsx('my-2 h-16 w-16')} />}
+                icon={<UnstuckIcon className={clsx('my-2 h-16 w-16')} />}
                 description="Install and use the package with ease thanks to its typed options."
-                active={currentState === 'npm'}
-                onClick={() => setCurrentState('npm')}
+                active={currentState === 'unstuck'}
+                onClick={() => setCurrentState('unstuck')}
               /> */}
             </div>
           </div>
@@ -134,7 +160,7 @@ function ProjectsContents() {
                     {
                       icon: <GitHubIcon className="h-4 w-4" />,
                       title: 'connect-cause-frontend - GitHub',
-                      isActive: currentState === 'npm',
+                      isActive: currentState === 'unstuck',
                     },
                   ]}
                 >
@@ -146,7 +172,7 @@ function ProjectsContents() {
                       description="Platform for students to get experience through real-world projects to gain a greater understanding of their skills/talents/interests/personality traits."
                     />
                   )}
-                  {/* {currentState === 'npm' && (
+                  {/* {currentState === 'unstuck' && (
                     <NpmWireframe
                       packageName="tailwindcss-accent"
                       description="Adds accent colors for more dynamic and flexible color utilization."

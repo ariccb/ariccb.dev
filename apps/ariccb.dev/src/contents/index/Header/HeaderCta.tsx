@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { m, useReducedMotion } from 'framer-motion';
 import Link from 'next/link';
+import AccentDemo from '@/components/mdx/AccentDemo';
 
 import { DocumentIcon } from '@/components/Icons';
 
@@ -35,12 +36,26 @@ function ButtonContactMe() {
   );
 }
 
+function ChangeColor() {
+  return (
+    <a
+      className={clsx(
+        'button button--ghost px-2 text-amber-600',
+        'md:button--big md:px-2'
+      )}
+    >
+      <AccentDemo />
+    </a>
+  );
+}
+
 function ButtonResume() {
   return (
     <a
       target="_blank"
       rel="noreferrer nofollow"
-      href="https://www.figma.com/file/U2lKYq1sqdDMz7qWNLIa4T/Resume?type=design&node-id=0%3A1&t=jWkydbczHnA1bLkG-1"
+      href="assets/resumes/Full-Stack Dev - Aric Crosson Bouwers Resume.pdf"
+      download
       className={clsx(
         'button button--ghost px-2 text-amber-600',
         'md:button--big md:px-2'
@@ -118,6 +133,7 @@ function HeaderCta({
         transition={{ delay: 0.4 }}
       >
         <ButtonContactMe />
+        <ChangeColor />
       </m.div>
       {isFree ? (
         <m.div
@@ -141,8 +157,10 @@ function HeaderCta({
           </m.div>
         </m.div>
       ) : (
-        <m.div variants={animation} transition={{ delay: 0.5 }}>
-          <ButtonResume />
+        <m.div>
+          <m.div variants={animation} transition={{ delay: 0.5 }}>
+            <ButtonResume />
+          </m.div>
         </m.div>
       )}
     </m.div>

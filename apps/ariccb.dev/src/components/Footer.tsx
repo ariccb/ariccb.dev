@@ -97,7 +97,7 @@ function FooterGroup({ title, links }: FooterGroupProps) {
 
 function FooterDescription() {
   return (
-    <div className={clsx('max-w-[348px]')}>
+    <div className={clsx('max-w-[500px]')}>
       <div
         className={clsx(
           'mb-3 text-[13px] text-slate-600',
@@ -107,9 +107,12 @@ function FooterDescription() {
         About Me
       </div>
       <p className={clsx('mb-4 font-normal leading-relaxed')}>
-        I&apos;m Aric, a <strong>full-stack developer.</strong>
-        <br />I am a natural learner, and love working with people. Eye for
-        design. Creative mind. I&apos;m here for the <strong>fun.</strong>
+        I&apos;m Aric; a <strong>full-stack developer.</strong>
+        <br />
+        Incredible team player. Addicted to learning. Eye for design. Creative
+        mind. Natural leader, with a teacher mindset. Experienced, but humble.
+        <br />
+        I&apos;m here to bring value, and have <strong>fun</strong> doing it!
       </p>
       <ul className={clsx('-ml-2 flex gap-1')}>
         {/* <li>
@@ -208,11 +211,11 @@ function Footer() {
                     //   title: 'Personal Blog',
                     //   href: '/blog',
                     // },
-                    {
-                      title: 'T.I.L',
-                      href: '/today-i-learned',
-                      label: 'new',
-                    },
+                    // {
+                    //   title: 'T.I.L',
+                    //   href: '/today-i-learned',
+                    //   label: 'new',
+                    // },
                   ]}
                 />
               </div>
