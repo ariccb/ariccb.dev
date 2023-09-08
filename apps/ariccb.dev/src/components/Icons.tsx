@@ -500,11 +500,7 @@ export function NpmIcon(props: ComponentProps<'svg'>) {
 
 export function UnstuckIcon(props: ComponentProps<'svg'>) {
   // add props to this <TerrainIcon>
-  return (
-    <TerrainIcon
-      sx={{ viewBox: '0 0 24 42', role: 'img', fill: 'currentcolor', ...props }}
-    />
-  );
+  return <TerrainIcon />;
 }
 
 export function TwitterIcon(props: ComponentProps<'svg'>) {
