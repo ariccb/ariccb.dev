@@ -38,14 +38,15 @@ function ButtonContactMe() {
 
 function ChangeColor() {
   return (
-    <a
+    <button
+      type="button"
       className={clsx(
         'button button--ghost px-2 text-amber-600',
         'md:button--big md:px-2'
       )}
     >
       <AccentDemo />
-    </a>
+    </button>
   );
 }
 

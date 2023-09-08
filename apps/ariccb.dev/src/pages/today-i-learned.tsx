@@ -4,16 +4,15 @@ import Page from '@/contents-layouts/Page';
 
 function TIL() {
   return (
-    <></>
-    // <Page
-    //   frontMatter={{
-    //     title: 'Today I Learned',
-    //     description: `Short notes on software development related topics.`,
-    //   }}
-    //   headerImage={<HeaderImage />}
-    // >
-    //   <TILContents />
-    // </Page>
+    <Page
+      frontMatter={{
+        title: 'Today I Learned',
+        description: `Short notes on software development related topics.`,
+      }}
+      headerImage={<HeaderImage />}
+    >
+      <TILContents />
+    </Page>
   );
 }
 

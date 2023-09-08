@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 
 import SectionTitle from '@/components/sections/SectionTitle';
-import { Key } from '@mui/icons-material';
 
 function KeyStrengths() {
   return (

@@ -126,7 +126,7 @@ function ProjectsContents() {
         <div className={clsx('flex', 'lg:gap-12')}>
           <div className={clsx('hidden flex-1 flex-col gap-3 pt-8', 'lg:flex')}>
             <div className={clsx('flex flex-col gap-3')}>
-              <Link href={'https://github.com/ariccb/connect-cause-backend'}>
+              <Link href="https://github.com/ariccb/connect-cause-backend">
                 <SectionButton
                   title="Backend source code on GitHub"
                   icon={<GitHubIcon className={clsx('my-2 h-16 w-16')} />}
@@ -137,7 +137,7 @@ function ProjectsContents() {
                   }}
                 />
               </Link>
-              <Link href={'https://github.com/ariccb/connect-cause-frontend'}>
+              <Link href="https://github.com/ariccb/connect-cause-frontend">
                 <SectionButton
                   title="Frontend source code on GitHub"
                   icon={<GitHubIcon className={clsx('my-2 h-16 w-16')} />}
