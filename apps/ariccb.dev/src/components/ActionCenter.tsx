@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { m } from 'framer-motion';
-import { useTheme } from 'next-themes';
+import useTheme from '@/hooks/useTheme';
 
 import { DarkIcon, EyeIcon, EyeSlash, LightIcon } from '@/components/Icons';
 
@@ -56,12 +56,15 @@ function ActionCenterButton({
   );
 }
 
+//useEffect to initially set the theme to "system"
+
 function ActionCenter() {
   const { theme, setTheme } = useTheme();
   const { focusMode, setFocusMode } = useFocusMode();
 
   const handleThemeChange = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
+    console.log('handleThemeChange' + theme);
   };
 
   return (
@@ -77,7 +80,7 @@ function ActionCenter() {
       <div className={clsx('flex flex-1 flex-col gap-8 p-2')}>
         <m.div className={clsx('flex h-24 gap-4')} variants={animation}>
           <ActionCenterButton
-            active={theme === 'dark'}
+            active={theme === 'dark' || theme === 'light'}
             title={theme === 'dark' ? 'Dark Mode: On' : 'Dark Mode: Off'}
             onClick={handleThemeChange}
             icon={
@@ -88,7 +91,7 @@ function ActionCenter() {
                     : { rotate: [90.01, 0] }
                 }
                 transition={{ ease: 'easeOut', duration: 0.8 }}
-                className={clsx('absolute top-4 left-4 h-36 w-36 rounded-full')}
+                className={clsx('absolute left-4 top-4 h-36 w-36 rounded-full')}
               >
                 <m.div
                   animate={
