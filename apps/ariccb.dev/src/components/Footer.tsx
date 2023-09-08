@@ -185,12 +185,12 @@ function Footer() {
                     {
                       title: 'Experience',
                       href: '/work/experience',
-                      label: 'soon',
+                      label: 'new',
                     },
                     {
                       title: 'Skills and Tools',
                       href: '/work/skills-and-tools',
-                      label: 'soon',
+                      label: 'new',
                     },
                     { title: 'Studio', href: '/work/studio', label: 'soon' },
                   ]}
@@ -200,8 +200,8 @@ function Footer() {
                   links={[
                     {
                       title: 'Projects',
-                      href: '/work/projects',
-                      label: 'soon',
+                      href: '/projects',
+                      label: 'new',
                     },
                     // {
                     //   title: 'Docs',

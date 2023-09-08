@@ -8,7 +8,7 @@ function Projects() {
       frontMatter={{
         title: 'Projects',
         description: 'Showcase of my full-stack development work.',
-        caption: 'This page is a work in progress',
+        caption: 'My Projects',
       }}
       headerImage={<HeaderImage />}
     >

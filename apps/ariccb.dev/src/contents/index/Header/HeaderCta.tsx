@@ -54,7 +54,7 @@ function ButtonResume() {
     <a
       target="_blank"
       rel="noreferrer nofollow"
-      href="assets/resumes/Full-Stack Dev - Aric Crosson Bouwers Resume.pdf"
+      href="/assets/resumes/Full-Stack Dev - Aric Crosson Bouwers - Resume ATS.docx"
       download
       className={clsx(
         'button button--ghost px-2 text-amber-600',
