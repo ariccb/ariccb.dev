@@ -13,12 +13,11 @@ import useOnScroll from '@/hooks/useOnScroll';
 const workLinks = [
   { title: 'Skills & Tools', href: '/work/skills-and-tools' },
   { title: 'Experience', href: '/work/experience' },
+  { title: 'Contact', href: '/work/contact' },
+  { title: 'Studio (wip)', href: '/wip' },
   // { title: 'Studio', href: '/work/studio' },
-  // { title: 'Contact', href: '/work/contact' },
   // { title: 'Skills & Tools (wip)', href: '/wip' },
   // { title: 'Experience (wip)', href: '/wip' },
-  { title: 'Studio (wip)', href: '/wip' },
-  { title: 'Contact', href: '/work/contact' },
 ];
 
 function Navbar() {
@@ -48,7 +47,7 @@ function Navbar() {
             'md:px-4'
           )}
         >
-          <nav className={clsx('flex', 'md:gap-2')} data-accent="accent" Wor>
+          <nav className={clsx('flex', 'md:gap-2')} data-accent="accent">
             <NavLogo href="/" title="Home" />
             <ul className={clsx('flex items-center', 'md:gap-1')}>
               <li>
