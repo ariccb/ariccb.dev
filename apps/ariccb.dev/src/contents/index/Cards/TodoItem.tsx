@@ -7,10 +7,9 @@ export type TodoItemState =
   | 'values';
 
 interface TodoItemProps {
-  state: Array<TodoItemState>;
+  // state: Array<TodoItemState>;
   title?: string;
   description?: string;
-  date?: string;
   tag1?: string;
   tag2?: string;
   tag3?: string;
@@ -23,8 +22,22 @@ interface TodoItemProps {
   tag10?: string;
 }
 
+TodoItem.defaultProps = {
+  title: '',
+  description: '',
+  tag1: '',
+  tag2: '',
+  tag3: '',
+  tag4: '',
+  tag5: '',
+  tag6: '',
+  tag7: '',
+  tag8: '',
+  tag9: '',
+  tag10: '',
+};
+
 function TodoItem({
-  state,
   title,
   description,
   tag1,
