@@ -498,7 +498,7 @@ export function NpmIcon(props: ComponentProps<'svg'>) {
   );
 }
 
-export function UnstuckIcon(props: ComponentProps<'svg'>) {
+export function UnstuckIcon() {
   // add props to this <TerrainIcon>
   return <TerrainIcon />;
 }
