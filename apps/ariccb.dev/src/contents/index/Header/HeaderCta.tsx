@@ -174,7 +174,7 @@ function HeaderCta({
       </m.div>
       <m.div
         className={clsx('top-20 mx-0')}
-        initial={{ y: 0, opacity: 0, pointerEvents: 'none' }}
+        initial={{ y: 40, opacity: 0, pointerEvents: 'none' }}
         animate={{ y: 10, opacity: 1, pointerEvents: 'auto' }}
         transition={{ delay: isFreeAnimationDuration + 4, duration: 1.2 }}
       >

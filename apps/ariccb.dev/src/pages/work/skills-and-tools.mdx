@@ -114,6 +114,8 @@ I represent all data in labels to make it easier to read. The **underline indica
     <Label indicator={100}> React-Router </Label>
   </HStack>
   <HStack spacing={8}>
+    <Label indicator={80}> Webpack </Label>
+    <Label indicator={100}> Vite </Label>
     <Label indicator={100}> OpenAI API Training Models </Label>
     <Label indicator={25}> Swagger </Label>
     <Label indicator={80}> Unit Testing </Label>
@@ -124,11 +126,18 @@ I represent all data in labels to make it easier to read. The **underline indica
 
 <VStack spacing={12}>
   <HStack spacing={8}>
-    <Label indicator={100}>Supabase</Label>
+    <Label indicator={100}>
+      Supabase{' '}
+      <small>(Database / Auth / Storage / Edge Functions / Realtime)</small>
+    </Label>
     <Label indicator={100}>PostgreSQL </Label>
+  </HStack>
+  <HStack spacing={8}>
     <Label indicator={100}>MongoDB</Label>
     <Label indicator={100}>Mongoose.js</Label>
-
+    <Label indicator={80}>
+      Firebase <small>(Hosting / Storage / Auth)</small>
+    </Label>
   </HStack>
 </VStack>
 

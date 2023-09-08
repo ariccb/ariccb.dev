@@ -106,9 +106,14 @@ function WhoIAm() {
         />
       </header>
       <SectionContent>
-        <div className={clsx('flex', 'lg:gap-12')}>
+        {/* move the whole section down in the y direction */}
+        <div className={clsx('flex gap-4')}>
           <div
-            className={clsx('-mt-8 hidden flex-1 flex-col gap-3', 'lg:flex')}
+            className={clsx(
+              'mt-6 flex-1 flex-col gap-3',
+              'flex md:-mt-8',
+              'lg:flex'
+            )}
           >
             {content.map((item, i) => (
               <SectionButton
@@ -122,14 +127,17 @@ function WhoIAm() {
             ))}
           </div>
           <div
-            className={clsx('relative flex flex-1 items-center justify-center')}
+            className={clsx(
+              'relative  flex flex-1 items-center justify-center'
+            )}
           >
             {' '}
             {currentState === null ? null : (
               <div
                 className={clsx(
-                  '-mt-8 flex gap-4',
-                  'md:gap-6 lg:top-8 lg:mt-0'
+                  'mt-6 flex gap-4',
+                  '-mt-8 md:gap-6',
+                  'lg:top-8 lg:mt-0'
                 )}
               >
                 <div>

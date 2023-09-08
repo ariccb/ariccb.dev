@@ -6,7 +6,7 @@ import WhoIAm from '@/contents/index/WhoIAm';
 import DetailOriented from '@/contents/index/DetailOriented';
 import FeaturedCard from '@/contents/index/FeaturedCard';
 import Header from '@/contents/index/Header';
-import PrettyOptimized from '@/contents/index/PrettyOptimized';
+import Curious from '@/contents/index/Curious';
 import Quote from '@/contents/index/Quote';
 import KeyStrengths from '@/contents/index/KeyStrengths';
 
@@ -79,9 +79,7 @@ function IndexContents() {
         <FeaturedCardSection />
       </div>
       <br />
-      <div
-        className={clsx('max-sm:hidden', '-mt-12 mb-12', 'md:mb-24 md:mt-0')}
-      >
+      <div className={clsx('mb-12 mt-2', 'md:mb-24 md:mt-0')}>
         <QuoteSection />
       </div>
       <section className={clsx('mb-10', 'lg:mb-24')}>
@@ -94,7 +92,7 @@ function IndexContents() {
         <DetailOriented />
       </section>
       <section className={clsx('mb-12', 'lg:mb-24')}>
-        <PrettyOptimized />
+        <Curious />
       </section>
     </>
   );

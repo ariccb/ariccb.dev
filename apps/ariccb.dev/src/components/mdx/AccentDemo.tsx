@@ -1,4 +1,3 @@
-'use client';
 import clsx from 'clsx';
 import { useState } from 'react';
 
@@ -102,9 +101,9 @@ function AccentDemo() {
           }
         `}
       </style>
-      <button type="button" className={clsx('button')} onClick={handleClick}>
+      <a className={clsx('button')} onClick={handleClick}>
         {getButtonText(accent)}
-      </button>
+      </a>
     </div>
   );
 }

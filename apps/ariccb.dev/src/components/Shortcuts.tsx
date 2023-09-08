@@ -21,7 +21,7 @@ function Shortcuts() {
   const { focusMode, setFocusMode } = useFocusMode();
 
   useShortcut('KeyD', () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(theme === 'system' || 'light' ? 'dark' : 'light');
   });
 
   useShortcut('KeyQ', () => {
