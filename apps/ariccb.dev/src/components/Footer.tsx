@@ -107,7 +107,7 @@ function FooterDescription() {
         About Me
       </div>
       <p className={clsx('mb-4 font-normal leading-relaxed')}>
-        I&apos;m Aric; a <strong>full-stack developer.</strong>
+        I&apos;m Aric. A <strong>full-stack developer.</strong>
         <br />
         Incredible team player. Addicted to learning. Eye for design. Creative
         mind. Natural leader, with a teacher mindset. Experienced, but humble.
