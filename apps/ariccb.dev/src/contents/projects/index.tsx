@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useState } from 'react';
 
-import { GitHubIcon, UnstuckIcon } from '@/components/Icons';
+import { GitHubIcon, ReactIcon } from '@/components/Icons';
 import { SectionButton } from '@/components/sections/SectionButton';
 import SectionContent from '@/components/sections/SectionContent';
 import SectionTitle from '@/components/sections/SectionTitle';
@@ -47,7 +47,7 @@ function ProjectsContents() {
               />
               <SectionButton
                 title="Unstuck"
-                icon={<UnstuckIcon className={clsx('my-2 h-16 w-16')} />}
+                icon={<ReactIcon className={clsx('my-2 h-16 w-16')} />}
                 description="Install and use the package with ease thanks to its typed options."
                 active={currentState === 'unstuck'}
                 onClick={() => setCurrentState('unstuck')}
@@ -86,7 +86,7 @@ function ProjectsContents() {
                       type="browser"
                       browserTabs={[
                         {
-                          icon: <UnstuckIcon className="h-4 w-4" />,
+                          icon: <ReactIcon className="h-4 w-4" />,
                           title: 'www.unstuck.app - Unstuck',
                           isActive: currentState === 'unstuck',
                         },
