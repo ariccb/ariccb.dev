@@ -13,7 +13,7 @@ import LandingPageImg from '@/components/images/unstuck-landingpage.png';
 
 function ProjectsContents() {
   const [currentState, setCurrentState] = useState<'unstuck' | 'github'>(
-    'github'
+    'unstuck'
   );
 
   return (
@@ -37,6 +37,13 @@ function ProjectsContents() {
           <div className={clsx('hidden flex-1 flex-col gap-3 pt-8', 'lg:flex')}>
             <div className={clsx('flex flex-col gap-3')}>
               <SectionButton
+                title="Unstuck"
+                icon={<ReactIcon className={clsx('my-2 h-16 w-16')} />}
+                description="Teaching students how to problem solve - breaking down problems to actionable steps."
+                active={currentState === 'unstuck'}
+                onClick={() => setCurrentState('unstuck')}
+              />
+              <SectionButton
                 title="Source code on GitHub"
                 icon={<GitHubIcon className={clsx('my-2 h-16 w-16')} />}
                 description=""
@@ -44,13 +51,6 @@ function ProjectsContents() {
                 onClick={() => {
                   setCurrentState('github');
                 }}
-              />
-              <SectionButton
-                title="Unstuck"
-                icon={<ReactIcon className={clsx('my-2 h-16 w-16')} />}
-                description="Install and use the package with ease thanks to its typed options."
-                active={currentState === 'unstuck'}
-                onClick={() => setCurrentState('unstuck')}
               />
             </div>
           </div>
