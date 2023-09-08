@@ -13,7 +13,7 @@ function Curious() {
           <br />,
           <br />,
           'I always welcome feedback ',
-          <strong>- even if it's a criticism -</strong>,
+          <strong>- even if it&apos;s a criticism -</strong>,
           " as it's truly the only way to improve and level up.",
         ]}
       />

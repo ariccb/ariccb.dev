@@ -56,15 +56,12 @@ function ActionCenterButton({
   );
 }
 
-//useEffect to initially set the theme to "system"
-
 function ActionCenter() {
   const { theme, setTheme } = useTheme();
   const { focusMode, setFocusMode } = useFocusMode();
 
   const handleThemeChange = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
-    console.log('handleThemeChange' + theme);
   };
 
   return (
