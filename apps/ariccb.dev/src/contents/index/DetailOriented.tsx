@@ -8,7 +8,8 @@ function DetailOriented() {
       <SectionTitle
         title="Keen Eye for Spotting Small Details."
         caption="Detail Oriented"
-        description="Awareness to ease of use, user interface consistency, and the ability to zero in on the little things that bring an application from good to great. "
+        description="A (healthy) dose of obsession over alignment and balance, user interface consistency, and spotting the areas that need more thought in a UI.
+        I have the ability to zero in on the little things that bring an application from good to great; from color palettes to typography, animation speed and 'feel' to spacing and layout."
       />
     </header>
   );

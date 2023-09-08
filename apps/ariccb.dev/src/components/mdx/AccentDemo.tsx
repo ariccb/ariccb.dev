@@ -1,3 +1,4 @@
+'use client';
 import clsx from 'clsx';
 import { useState } from 'react';
 
@@ -33,18 +34,18 @@ function AccentDemo() {
       case 'amber':
         return `Amber's good 🤩`;
       case 'orange':
-        return `Orange for you? 👀`;
+        return `Orange for you? 🍊`;
       case 'green':
         return `Ah green, nice choice! 😁`;
       case 'pink':
         return `Pink! 🌸`;
       default:
-        return `Don't Like My Accent Colour? 🙃`;
+        return `✦ Want a different color? ✦`;
     }
   };
 
   return (
-    <div className={clsx('my-12 flex items-center justify-center')}>
+    <div>
       {/* eslint-disable-next-line react/no-unknown-property */}
       <style jsx global>
         {`
@@ -101,11 +102,7 @@ function AccentDemo() {
           }
         `}
       </style>
-      <button
-        type="button"
-        className={clsx('button button--solid button--big')}
-        onClick={handleClick}
-      >
+      <button type="button" className={clsx('button')} onClick={handleClick}>
         {getButtonText(accent)}
       </button>
     </div>
