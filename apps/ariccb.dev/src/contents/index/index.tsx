@@ -8,7 +8,6 @@ import FeaturedCard from '@/contents/index/FeaturedCard';
 import Header from '@/contents/index/Header';
 import PrettyOptimized from '@/contents/index/PrettyOptimized';
 import Quote from '@/contents/index/Quote';
-import AccentDemo from '@/components/mdx/AccentDemo';
 import KeyStrengths from '@/contents/index/KeyStrengths';
 
 function FeaturedCardSection() {

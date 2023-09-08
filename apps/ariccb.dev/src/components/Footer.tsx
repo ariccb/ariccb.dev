@@ -107,7 +107,7 @@ function FooterDescription() {
         About Me
       </div>
       <p className={clsx('mb-4 font-normal leading-relaxed')}>
-        I&apos;m Aric; a <strong>full-stack developer.</strong>
+        I&apos;m Aric. A <strong>full-stack developer.</strong>
         <br />
         Incredible team player. Addicted to learning. Eye for design. Creative
         mind. Natural leader, with a teacher mindset. Experienced, but humble.
@@ -185,12 +185,12 @@ function Footer() {
                     {
                       title: 'Experience',
                       href: '/work/experience',
-                      label: 'soon',
+                      label: 'new',
                     },
                     {
                       title: 'Skills and Tools',
                       href: '/work/skills-and-tools',
-                      label: 'soon',
+                      label: 'new',
                     },
                     { title: 'Studio', href: '/work/studio', label: 'soon' },
                   ]}
@@ -200,8 +200,8 @@ function Footer() {
                   links={[
                     {
                       title: 'Projects',
-                      href: '/work/projects',
-                      label: 'soon',
+                      href: '/projects',
+                      label: 'new',
                     },
                     // {
                     //   title: 'Docs',

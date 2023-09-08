@@ -4,13 +4,13 @@ export type TodoItemState =
   | 'traits'
   | 'professional-skills'
   | 'interests'
-  | 'values';
+  | 'values'
+  | '';
 
 interface TodoItemProps {
   state: Array<TodoItemState>;
   title?: string;
   description?: string;
-  date?: string;
   tag1?: string;
   tag2?: string;
   tag3?: string;
@@ -25,18 +25,18 @@ interface TodoItemProps {
 
 function TodoItem({
   state,
-  title,
-  description,
-  tag1,
-  tag2,
-  tag3,
-  tag4,
-  tag5,
-  tag6,
-  tag7,
-  tag8,
-  tag9,
-  tag10,
+  title = '',
+  description = '',
+  tag1 = '',
+  tag2 = '',
+  tag3 = '',
+  tag4 = '',
+  tag5 = '',
+  tag6 = '',
+  tag7 = '',
+  tag8 = '',
+  tag9 = '',
+  tag10 = '',
 }: TodoItemProps) {
   return (
     <div
@@ -64,7 +64,7 @@ function TodoItem({
         )}
       >
         {' '}
-        {tag1 != '' ? (
+        {tag1 !== '' ? (
           <div
             className={clsx(
               'rounded-full',
@@ -76,7 +76,7 @@ function TodoItem({
             {tag1}
           </div>
         ) : null}
-        {tag2 != '' ? (
+        {tag2 !== '' ? (
           <div
             className={clsx(
               'rounded-full',
@@ -88,7 +88,7 @@ function TodoItem({
             {tag2}
           </div>
         ) : null}
-        {tag3 != '' ? (
+        {tag3 !== '' ? (
           <div
             className={clsx(
               'rounded-full',
@@ -100,7 +100,7 @@ function TodoItem({
             {tag3}
           </div>
         ) : null}
-        {tag4 != '' ? (
+        {tag4 !== '' ? (
           <div
             className={clsx(
               'rounded-full',
@@ -112,7 +112,7 @@ function TodoItem({
             {tag4}
           </div>
         ) : null}
-        {tag5 != '' ? (
+        {tag5 !== '' ? (
           <div
             className={clsx(
               'rounded-full',
@@ -124,7 +124,7 @@ function TodoItem({
             {tag5}
           </div>
         ) : null}
-        {tag6 != '' ? (
+        {tag6 !== '' ? (
           <div
             className={clsx(
               'rounded-full',
@@ -136,7 +136,7 @@ function TodoItem({
             {tag6}
           </div>
         ) : null}
-        {tag7 != '' ? (
+        {tag7 !== '' ? (
           <div
             className={clsx(
               'rounded-full',
@@ -148,7 +148,7 @@ function TodoItem({
             {tag7}
           </div>
         ) : null}
-        {tag8 != '' ? (
+        {tag8 !== '' ? (
           <div
             className={clsx(
               'rounded-full',
@@ -160,7 +160,7 @@ function TodoItem({
             {tag8}
           </div>
         ) : null}
-        {tag9 != '' ? (
+        {tag9 !== '' ? (
           <div
             className={clsx(
               'rounded-full',
@@ -172,7 +172,7 @@ function TodoItem({
             {tag9}
           </div>
         ) : null}
-        {tag10 != '' ? (
+        {tag10 !== '' && !state.includes('') ? (
           <div
             className={clsx(
               'rounded-full',

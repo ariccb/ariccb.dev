@@ -9,6 +9,7 @@ function AccentDemo() {
     'orange',
     'green',
     'pink',
+    'default',
   ] as const;
 
   const [accent, setAccent] = useState<(typeof accents)[number]>('default');
