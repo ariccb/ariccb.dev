@@ -4,10 +4,11 @@ export type TodoItemState =
   | 'traits'
   | 'professional-skills'
   | 'interests'
-  | 'values';
+  | 'values'
+  | '';
 
 interface TodoItemProps {
-  // state: Array<TodoItemState>;
+  state: Array<TodoItemState>;
   title?: string;
   description?: string;
   tag1?: string;
@@ -23,6 +24,7 @@ interface TodoItemProps {
 }
 
 TodoItem.defaultProps = {
+  state: [],
   title: '',
   description: '',
   tag1: '',
@@ -38,6 +40,7 @@ TodoItem.defaultProps = {
 };
 
 function TodoItem({
+  state,
   title,
   description,
   tag1,
@@ -185,7 +188,7 @@ function TodoItem({
             {tag9}
           </div>
         ) : null}
-        {tag10 != '' ? (
+        {tag10 != '' && !state.includes('') ? (
           <div
             className={clsx(
               'rounded-full',
