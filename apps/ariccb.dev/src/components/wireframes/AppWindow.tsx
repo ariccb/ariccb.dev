@@ -102,7 +102,7 @@ function AppWindow({
           </>
         )}
       </div>
-      <div className={clsx('flex-1 overflow-hidden')}>{children}</div>
+      <div className={clsx('overflow-hidden')}>{children}</div>
     </div>
   );
 }

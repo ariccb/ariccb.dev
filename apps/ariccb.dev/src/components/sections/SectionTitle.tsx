@@ -18,6 +18,10 @@ interface SectionTitleProps {
     title: string;
     href: string;
   } | null;
+  button3?: {
+    title: string;
+    href: string;
+  } | null;
 }
 
 function SectionTitle({
@@ -27,6 +31,7 @@ function SectionTitle({
   description,
   button = null,
   button2 = null,
+  button3 = null,
 }: SectionTitleProps) {
   const Heading = as;
 
@@ -70,6 +75,14 @@ function SectionTitle({
         <div className={clsx('mt-4', 'md:mt-6')}>
           <Link href={button2.href} className={clsx('button button--soft')}>
             {button2.title}
+            <ChevronRightIcon className="mt-0.5 h-3 w-3" />
+          </Link>
+        </div>
+      )}
+      {button3 && (
+        <div className={clsx('mt-4', 'md:mt-6')}>
+          <Link href={button3.href} className={clsx('button button--soft')}>
+            {button3.title}
             <ChevronRightIcon className="mt-0.5 h-3 w-3" />
           </Link>
         </div>
