@@ -192,7 +192,7 @@ function Footer() {
                       href: '/work/skills-and-tools',
                       label: 'new',
                     },
-                    { title: 'Studio', href: '/work/studio', label: 'soon' },
+                    // { title: 'Studio', href: '/work/studio', label: 'soon' },
                   ]}
                 />
                 <FooterGroup

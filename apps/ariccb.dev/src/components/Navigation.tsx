@@ -14,7 +14,7 @@ const workLinks = [
   { title: 'Skills & Tools', href: '/work/skills-and-tools' },
   { title: 'Experience', href: '/work/experience' },
   { title: 'Contact', href: '/work/contact' },
-  { title: 'Studio (wip)', href: '/wip' },
+  // { title: 'Studio (wip)', href: '/wip' },
   // { title: 'Studio', href: '/work/studio' },
   // { title: 'Skills & Tools (wip)', href: '/wip' },
   // { title: 'Experience (wip)', href: '/wip' },
