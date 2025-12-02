@@ -73,7 +73,11 @@ function SectionTitle({
       )}
       {button2 && (
         <div className={clsx('mt-4', 'md:mt-6')}>
-          <Link href={button2.href} className={clsx('button button--soft')}>
+          <Link
+            href={button2.href}
+            className={clsx('button button--soft')}
+            target="_blank"
+          >
             {button2.title}
             <ChevronRightIcon className="mt-0.5 h-3 w-3" />
           </Link>
@@ -81,7 +85,11 @@ function SectionTitle({
       )}
       {button3 && (
         <div className={clsx('mt-4', 'md:mt-6')}>
-          <Link href={button3.href} className={clsx('button button--soft')}>
+          <Link
+            href={button3.href}
+            className={clsx('button button--soft')}
+            target="_blank"
+          >
             {button3.title}
             <ChevronRightIcon className="mt-0.5 h-3 w-3" />
           </Link>
