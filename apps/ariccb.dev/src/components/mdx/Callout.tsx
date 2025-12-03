@@ -9,8 +9,10 @@ import {
   JavaScriptIcon,
   ReactIcon,
   TailwindCssIcon,
-  MaterialUiIcon,
+  ShadcnIcon,
   FramerMotionIcon,
+  RiveIcon,
+  OpenAiIcon
 } from '@/components/Icons';
 
 interface CalloutProps {
@@ -25,7 +27,8 @@ interface CalloutProps {
     | 'material-ui'
     | 'typescript'
     | 'framer-motion'
-    | 'framer-motion-rive';
+    | 'rive'
+    | 'ai';
 }
 
 function Callout({
@@ -90,8 +93,8 @@ function Callout({
       break;
     case 'material-ui':
       data = {
-        title: 'Material UI (and other frontend component libraries)',
-        icon: <MaterialUiIcon />,
+        title: 'Frontend UI Frameworks',
+        icon: <ShadcnIcon />,
         modifier: '',
       };
       break;
@@ -102,10 +105,10 @@ function Callout({
         modifier: '',
       };
       break;
-    case 'framer-motion-rive':
+    case 'rive':
       data = {
-        title: 'Framer Motion + Rive',
-        icon: <FramerMotionIcon />,
+        title: 'Rive',
+        icon: <RiveIcon />,
         modifier: '',
       };
       break;
@@ -113,6 +116,13 @@ function Callout({
       data = {
         title: 'TypeScript',
         icon: <TypeScriptIcon />,
+        modifier: '',
+      };
+      break;
+    case 'ai':
+      data = {
+        title: 'AI',
+        icon: <OpenAiIcon />,
         modifier: '',
       };
       break;
