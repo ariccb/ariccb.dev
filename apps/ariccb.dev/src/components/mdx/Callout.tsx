@@ -1,5 +1,5 @@
+import type { PropsWithChildren, ReactElement } from 'react';
 import clsx from 'clsx';
-
 import {
   ErrorIcon,
   InfoIcon,
@@ -13,8 +13,6 @@ import {
   FramerMotionIcon,
 } from '@/components/Icons';
 
-import type { PropsWithChildren, ReactElement } from 'react';
-
 interface CalloutProps {
   variant?:
     | 'neutral'
@@ -26,7 +24,8 @@ interface CalloutProps {
     | 'tailwind'
     | 'material-ui'
     | 'typescript'
-    | 'framer-motion';
+    | 'framer-motion'
+    | 'framer-motion-rive';
 }
 
 function Callout({
@@ -98,12 +97,31 @@ function Callout({
       break;
     case 'framer-motion':
       data = {
-        title: 'Material UI (and other frontend component libraries)',
+        title: 'Framer Motion',
         icon: <FramerMotionIcon />,
         modifier: '',
       };
       break;
+    case 'framer-motion-rive':
+      data = {
+        title: 'Framer Motion + Rive',
+        icon: <FramerMotionIcon />,
+        modifier: '',
+      };
+      break;
+    case 'typescript':
+      data = {
+        title: 'TypeScript',
+        icon: <TypeScriptIcon />,
+        modifier: '',
+      };
+      break;
     default:
+      data = {
+        title: 'Note',
+        icon: <NoteIcon />,
+        modifier: '',
+      };
   }
 
   return (

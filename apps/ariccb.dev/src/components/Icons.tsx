@@ -1,5 +1,5 @@
-import type { ComponentProps } from 'react';
 import TerrainIcon from '@mui/icons-material/Terrain';
+import type { ComponentProps } from 'react';
 
 export function LightIcon(props: ComponentProps<'svg'>) {
   return (

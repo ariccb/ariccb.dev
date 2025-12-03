@@ -1,16 +1,15 @@
 import clsx from 'clsx';
+import Image from 'next/image';
 import { useState } from 'react';
 
 import { GitHubIcon, ReactIcon } from '@/components/Icons';
+import ConnectCauseLandingPageImg from '@/components/images/connect-cause/connect-cause-landing-page.png';
+import LandingPageImg from '@/components/images/unstuck/unstuck-landingpage.png';
 import { SectionButton } from '@/components/sections/SectionButton';
 import SectionContent from '@/components/sections/SectionContent';
 import SectionTitle from '@/components/sections/SectionTitle';
 import AppWindow from '@/components/wireframes/AppWindow';
 import GitHubWireframe from '@/components/wireframes/GitHub';
-import Link from 'next/link';
-import Image from 'next/image';
-import LandingPageImg from '@/components/images/unstuck/unstuck-landingpage.png';
-import ConnectCauseLandingPageImg from '@/components/images/connect-cause/connect-cause-landing-page.png';
 
 function ProjectsContents() {
   const [currentState, setCurrentState] = useState<'unstuck' | 'github'>(
