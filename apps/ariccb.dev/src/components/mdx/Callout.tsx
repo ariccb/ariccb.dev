@@ -1,19 +1,21 @@
-import type { PropsWithChildren, ReactElement } from 'react';
 import clsx from 'clsx';
+
 import {
   ErrorIcon,
-  InfoIcon,
-  NoteIcon,
-  WarningIcon,
-  TypeScriptIcon,
-  JavaScriptIcon,
-  ReactIcon,
-  TailwindCssIcon,
-  ShadcnIcon,
   FramerMotionIcon,
+  InfoIcon,
+  JavaScriptIcon,
+  NoteIcon,
+  OpenAiIcon,
+  ReactIcon,
   RiveIcon,
-  OpenAiIcon
+  ShadcnIcon,
+  TailwindCssIcon,
+  TypeScriptIcon,
+  WarningIcon,
 } from '@/components/Icons';
+
+import type { PropsWithChildren, ReactElement } from 'react';
 
 interface CalloutProps {
   variant?:

@@ -2,6 +2,7 @@ import clsx from 'clsx';
 
 import { CodeIcon, HeartIcon, SparklesIcon } from '@/components/Icons';
 import { Link } from '@/components/mdx/custom-components/Link';
+
 import Curious from '@/contents/index/Curious';
 import DetailOriented from '@/contents/index/DetailOriented';
 import FeaturedCard from '@/contents/index/FeaturedCard';

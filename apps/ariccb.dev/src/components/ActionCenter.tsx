@@ -1,10 +1,12 @@
-import type { PropsWithChildren, ReactElement } from 'react';
 import clsx from 'clsx';
 import { m } from 'framer-motion';
 
 import { DarkIcon, EyeIcon, EyeSlash, LightIcon } from '@/components/Icons';
+
 import useFocusMode from '@/hooks/useFocusMode';
 import useTheme from '@/hooks/useTheme';
+
+import type { PropsWithChildren, ReactElement } from 'react';
 
 const animation = {
   hide: { y: -16, opacity: 0 },
