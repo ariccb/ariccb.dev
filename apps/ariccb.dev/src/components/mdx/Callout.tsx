@@ -1,11 +1,32 @@
 import clsx from 'clsx';
 
-import { ErrorIcon, InfoIcon, NoteIcon, WarningIcon } from '@/components/Icons';
+import {
+  ErrorIcon,
+  InfoIcon,
+  NoteIcon,
+  WarningIcon,
+  TypeScriptIcon,
+  JavaScriptIcon,
+  ReactIcon,
+  TailwindCssIcon,
+  MaterialUiIcon,
+  FramerMotionIcon,
+} from '@/components/Icons';
 
 import type { PropsWithChildren, ReactElement } from 'react';
 
 interface CalloutProps {
-  variant?: 'neutral' | 'info' | 'warning' | 'danger';
+  variant?:
+    | 'neutral'
+    | 'info'
+    | 'warning'
+    | 'danger'
+    | 'js'
+    | 'react'
+    | 'tailwind'
+    | 'material-ui'
+    | 'typescript'
+    | 'framer-motion';
 }
 
 function Callout({
@@ -45,6 +66,41 @@ function Callout({
         title: 'Important',
         icon: <ErrorIcon />,
         modifier: 'mdx-callout--danger',
+      };
+      break;
+    case 'js':
+      data = {
+        title: 'JavaScript',
+        icon: <JavaScriptIcon />,
+        modifier: '',
+      };
+      break;
+    case 'react':
+      data = {
+        title: 'React',
+        icon: <ReactIcon />,
+        modifier: '',
+      };
+      break;
+    case 'tailwind':
+      data = {
+        title: 'Tailwind CSS',
+        icon: <TailwindCssIcon />,
+        modifier: '',
+      };
+      break;
+    case 'material-ui':
+      data = {
+        title: 'Material UI (and other frontend component libraries)',
+        icon: <MaterialUiIcon />,
+        modifier: '',
+      };
+      break;
+    case 'framer-motion':
+      data = {
+        title: 'Material UI (and other frontend component libraries)',
+        icon: <FramerMotionIcon />,
+        modifier: '',
       };
       break;
     default:

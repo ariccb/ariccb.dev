@@ -9,6 +9,7 @@ import Header from '@/contents/index/Header';
 import Curious from '@/contents/index/Curious';
 import Quote from '@/contents/index/Quote';
 import KeyStrengths from '@/contents/index/KeyStrengths';
+import { Link } from '@/components/mdx/custom-components/Link';
 
 function FeaturedCardSection() {
   return (
@@ -82,6 +83,9 @@ function IndexContents() {
       <div className={clsx('mb-12 mt-2', 'md:mb-24 md:mt-0')}>
         <QuoteSection />
       </div>
+      <section className={clsx('mb-10', 'lg:mb-24')}>
+        <Link href="/projects" className={clsx('link')} />
+      </section>
       <section className={clsx('mb-10', 'lg:mb-24')}>
         <WhoIAm />
       </section>

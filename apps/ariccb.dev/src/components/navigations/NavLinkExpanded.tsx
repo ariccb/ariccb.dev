@@ -16,7 +16,7 @@ function NavLinkExpanded({ title, items }: NavLinkExpandedProps) {
     <div className={clsx('flex')}>
       <div
         className={clsx(
-          'nav-link nav-link--label pointer-events-none ml-2 mr-2'
+          'nav-link nav-link--label lg: pointer-events-none ml-2 mr-2 hidden'
         )}
       >
         {title}
