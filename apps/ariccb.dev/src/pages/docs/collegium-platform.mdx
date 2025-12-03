@@ -1,0 +1,65 @@
+---
+title: Collegium Construction Management Platform
+description: Three-sided platform for real-estate development with BIM-driven collaboration.
+caption: Full Stack Application
+layout: Project
+---
+
+import Image from 'next/image';
+import InlineHighlight from '@/components/mdx/InlineHighlight';
+
+Collegium is a multi-tenant construction management platform that connects owners, consultants, contractors, and vendors. I was the first full-time developer, translating founder vision into a production-ready app with real-time collaboration, BIM ingestion, financial reporting, and granular permissions.
+
+---
+
+## Highlights
+
+- Architected **Next.js (App Router) + Firestore** data models with **TanStack Query** caching and optimistic updates for sub-second perceived latency.
+- Integrated **Autodesk APS** to ingest 50k+ BIM elements, enabling interactive model views and automated work-package scopes.
+- Built reusable UI components (data tables, filters, bid workflows) with MUI Component Framework, and later transitioned to creating new custom components with **Tailwind + shadcn/ui + Radix**. Utilized Framer Motion for purpose-built animations for clarity and UX polish.
+- Implemented role-based access and permission helpers to keep multi-side workflows (owners/consultants/contractors) aligned and secure.
+
+## Tech Stack
+
+> <InlineHighlight>`Next.js (App Router)`</InlineHighlight>
+> <InlineHighlight>`React 18`</InlineHighlight>
+> <InlineHighlight>`TypeScript`</InlineHighlight>
+> <InlineHighlight>`Tailwind CSS + shadcn/ui + Radix`</InlineHighlight>
+> <InlineHighlight>`TanStack Query`</InlineHighlight>
+> <InlineHighlight>`Firestore`</InlineHighlight>
+> <InlineHighlight>`Autodesk APS`</InlineHighlight>
+
+---
+
+## Screenshots
+
+<Image
+  src="/assets/images/collegium/Screenshot_Arc_2025-12-03_112347AM@2x.png"
+  alt="Collegium work package overview"
+  width={3220}
+  height={2014}
+/>
+<Image
+  src="/assets/images/collegium/Screenshot_Arc_2025-12-03_113113AM@2x.png"
+  alt="Collegium bidding dashboard"
+  width={3220}
+  height={2014}
+/>
+<Image
+  src="/assets/images/collegium/Screenshot_Arc_2025-12-03_112514AM@2x.png"
+  alt="Collegium user permissions"
+  width={3220}
+  height={2014}
+/>
+<Image
+  src="/assets/images/collegium/Screenshot_Arc_2025-12-03_112535AM@2x.png"
+  alt="Collegium finance report view"
+  width={3220}
+  height={2014}
+/>
+<Image
+  src="/assets/images/collegium/Screenshot_Arc_2025-12-03_113008AM@2x.png"
+  alt="Collegium scoped model view"
+  width={3220}
+  height={2014}
+/>

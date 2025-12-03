@@ -22,6 +22,41 @@ function ProjectsContents() {
   return (
     <>
       <SectionTitle
+        title="Collegium Construction Management Platform"
+        caption="Real-time collaboration for owners, consultants, and contractors"
+        description="Three-sided platform with BIM data ingestion, work packages, bid workflows, and financial reporting. Built with Next.js (App Router), Firestore, TanStack Query, and Autodesk APS."
+        button={{
+          title: 'Learn More About Collegium',
+          href: '/docs/collegium-platform',
+        }}
+      />
+      <SectionContent>
+        <div className={clsx('w-full')}>
+          <AppWindow
+            type="browser"
+            browserTabs={[
+              {
+                icon: <ReactIcon className="h-4 w-4" />,
+                title: 'Collegium — Construction Management',
+                isActive: true,
+              },
+            ]}
+          >
+            <a href="/docs/collegium-platform">
+              <Image
+                src="/assets/images/collegium/Screenshot_Arc_2025-12-03_112514AM@2x.png"
+                alt="Collegium platform screenshot"
+                width={3220}
+                height={2014}
+                style={{ width: '100%', height: 'auto' }}
+                sizes="100vw"
+              />
+            </a>
+          </AppWindow>
+        </div>
+      </SectionContent>
+
+      <SectionTitle
         title="Unstuck"
         caption="The Critical Thinking Tool For Students"
         description="A full-stack application that empowers high school students to learn, execute and retain critical thinking skills. It’s a platform for students to get experience through real-world projects to gain a greater understanding of their skills, talents, interests, and personality traits."
