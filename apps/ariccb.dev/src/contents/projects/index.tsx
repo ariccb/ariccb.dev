@@ -1,16 +1,15 @@
 import clsx from 'clsx';
+import Image from 'next/image';
 import { useState } from 'react';
 
 import { GitHubIcon, ReactIcon } from '@/components/Icons';
+import ConnectCauseLandingPageImg from '@/components/images/connect-cause/connect-cause-landing-page.png';
+import LandingPageImg from '@/components/images/unstuck/unstuck-landingpage.png';
 import { SectionButton } from '@/components/sections/SectionButton';
 import SectionContent from '@/components/sections/SectionContent';
 import SectionTitle from '@/components/sections/SectionTitle';
 import AppWindow from '@/components/wireframes/AppWindow';
 import GitHubWireframe from '@/components/wireframes/GitHub';
-import Link from 'next/link';
-import Image from 'next/image';
-import LandingPageImg from '@/components/images/unstuck/unstuck-landingpage.png';
-import ConnectCauseLandingPageImg from '@/components/images/connect-cause/connect-cause-landing-page.png';
 
 function ProjectsContents() {
   const [currentState, setCurrentState] = useState<'unstuck' | 'github'>(
@@ -22,6 +21,41 @@ function ProjectsContents() {
 
   return (
     <>
+      <SectionTitle
+        title="Collegium Construction Management Platform"
+        caption="Real-time collaboration for owners, consultants, and contractors"
+        description="Three-sided platform with BIM data ingestion, work packages, bid workflows, and financial reporting. Built with Next.js (App Router), Firestore, TanStack Query, and Autodesk APS."
+        button={{
+          title: 'Learn More About Collegium',
+          href: '/docs/collegium-platform',
+        }}
+      />
+      <SectionContent>
+        <div className={clsx('w-full')}>
+          <AppWindow
+            type="browser"
+            browserTabs={[
+              {
+                icon: <ReactIcon className="h-4 w-4" />,
+                title: 'Collegium — Construction Management',
+                isActive: true,
+              },
+            ]}
+          >
+            <a href="/docs/collegium-platform">
+              <Image
+                src="/assets/images/collegium/Screenshot_Arc_2025-12-03_112514AM@2x.png"
+                alt="Collegium platform screenshot"
+                width={3220}
+                height={2014}
+                style={{ width: '100%', height: 'auto' }}
+                sizes="100vw"
+              />
+            </a>
+          </AppWindow>
+        </div>
+      </SectionContent>
+
       <SectionTitle
         title="Unstuck"
         caption="The Critical Thinking Tool For Students"

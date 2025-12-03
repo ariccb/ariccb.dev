@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import { m, useReducedMotion } from 'framer-motion';
 import Link from 'next/link';
-import AccentDemo from '@/components/mdx/AccentDemo';
 
 import { DocumentIcon } from '@/components/Icons';
+import AccentDemo from '@/components/mdx/AccentDemo';
 
 const animation = {
   hide: {

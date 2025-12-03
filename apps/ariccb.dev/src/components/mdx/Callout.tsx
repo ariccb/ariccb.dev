@@ -2,15 +2,17 @@ import clsx from 'clsx';
 
 import {
   ErrorIcon,
-  InfoIcon,
-  NoteIcon,
-  WarningIcon,
-  TypeScriptIcon,
-  JavaScriptIcon,
-  ReactIcon,
-  TailwindCssIcon,
-  MaterialUiIcon,
   FramerMotionIcon,
+  InfoIcon,
+  JavaScriptIcon,
+  NoteIcon,
+  OpenAiIcon,
+  ReactIcon,
+  RiveIcon,
+  ShadcnIcon,
+  TailwindCssIcon,
+  TypeScriptIcon,
+  WarningIcon,
 } from '@/components/Icons';
 
 import type { PropsWithChildren, ReactElement } from 'react';
@@ -26,7 +28,9 @@ interface CalloutProps {
     | 'tailwind'
     | 'material-ui'
     | 'typescript'
-    | 'framer-motion';
+    | 'framer-motion'
+    | 'rive'
+    | 'ai';
 }
 
 function Callout({
@@ -91,19 +95,45 @@ function Callout({
       break;
     case 'material-ui':
       data = {
-        title: 'Material UI (and other frontend component libraries)',
-        icon: <MaterialUiIcon />,
+        title: 'Frontend UI Frameworks',
+        icon: <ShadcnIcon />,
         modifier: '',
       };
       break;
     case 'framer-motion':
       data = {
-        title: 'Material UI (and other frontend component libraries)',
+        title: 'Framer Motion',
         icon: <FramerMotionIcon />,
         modifier: '',
       };
       break;
+    case 'rive':
+      data = {
+        title: 'Rive',
+        icon: <RiveIcon />,
+        modifier: '',
+      };
+      break;
+    case 'typescript':
+      data = {
+        title: 'TypeScript',
+        icon: <TypeScriptIcon />,
+        modifier: '',
+      };
+      break;
+    case 'ai':
+      data = {
+        title: 'AI',
+        icon: <OpenAiIcon />,
+        modifier: '',
+      };
+      break;
     default:
+      data = {
+        title: 'Note',
+        icon: <NoteIcon />,
+        modifier: '',
+      };
   }
 
   return (

@@ -1,15 +1,15 @@
 import clsx from 'clsx';
 
 import { CodeIcon, HeartIcon, SparklesIcon } from '@/components/Icons';
+import { Link } from '@/components/mdx/custom-components/Link';
 
-import WhoIAm from '@/contents/index/WhoIAm';
+import Curious from '@/contents/index/Curious';
 import DetailOriented from '@/contents/index/DetailOriented';
 import FeaturedCard from '@/contents/index/FeaturedCard';
 import Header from '@/contents/index/Header';
-import Curious from '@/contents/index/Curious';
-import Quote from '@/contents/index/Quote';
 import KeyStrengths from '@/contents/index/KeyStrengths';
-import { Link } from '@/components/mdx/custom-components/Link';
+import Quote from '@/contents/index/Quote';
+import WhoIAm from '@/contents/index/WhoIAm';
 
 function FeaturedCardSection() {
   return (
