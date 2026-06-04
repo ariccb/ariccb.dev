@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import React from 'react';
 
 import { ChevronRightIcon } from '@/components/Icons';
 import NavLink from '@/components/navigations/NavLink';
@@ -23,17 +22,10 @@ function NavLinkExpanded({ title, items }: NavLinkExpandedProps) {
         <ChevronRightIcon className={clsx('h-3 w-3')} />
       </div>
       <ul className={clsx('flex items-center')}>
-        {items.map((item, idx) => (
-          <React.Fragment key={item.href}>
-            <li>
-              <NavLink title={item.title} href={item.href} />
-            </li>
-            {idx !== items.length - 1 && (
-              <li>
-                <div className="nav-link__separator">&middot;</div>
-              </li>
-            )}
-          </React.Fragment>
+        {items.map((item) => (
+          <li key={item.href}>
+            <NavLink title={item.title} href={item.href} />
+          </li>
         ))}
       </ul>
     </div>
