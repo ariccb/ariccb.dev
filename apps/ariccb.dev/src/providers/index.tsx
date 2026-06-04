@@ -14,7 +14,7 @@ function Provider({ children = null }: PropsWithChildren) {
     <FramerMotionProvider>
       <ThemeProvider attribute="class" disableTransitionOnChange>
         <FocusModeProvider>
-          <ColorAccentProvider defaultScheme="fuchsia">
+          <ColorAccentProvider defaultScheme="amber">
             <GlobalStateProvider>
               <MDXProvider components={mdxCustomComponents}>
                 {children}

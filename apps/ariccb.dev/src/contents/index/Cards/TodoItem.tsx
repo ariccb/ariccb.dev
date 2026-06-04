@@ -106,7 +106,7 @@ function TodoItem({
             className={clsx(
               'animate-[tag-pop_560ms_cubic-bezier(.2,.8,.2,1)_both] rounded-full border px-3.5 py-2 uppercase tracking-[0.08em]',
               'border-accent-300/70 bg-accent-100 text-accent-900 shadow-accent-900/5 shadow-sm',
-              'dark:border-accent-400/25 dark:bg-accent-500/15 dark:text-accent-100',
+              'dark:border-accent-300/45 dark:bg-accent-400/25 dark:shadow-accent-950/20 dark:text-white',
               'motion-reduce:animate-none',
               tagDelayClasses[index]
             )}

@@ -9,9 +9,46 @@ import SectionTitle from '@/components/sections/SectionTitle';
 import AppWindow from '@/components/wireframes/AppWindow';
 import GitHubWireframe from '@/components/wireframes/GitHub';
 
-function useStickyProgress(top = 80, distance = 120) {
-  const ref = useRef<HTMLDivElement>(null);
-  const initialDocumentTopRef = useRef<number | null>(null);
+type ProjectTone = 'professional' | 'helixir' | 'personal';
+
+const projectToneStyles: Record<
+  ProjectTone,
+  {
+    panel: string;
+    glow: string;
+    text: string;
+    pill: string;
+    wash: string;
+  }
+> = {
+  professional: {
+    panel:
+      'border-sky-200 bg-gradient-to-br from-sky-50 via-white to-cyan-50/70 dark:border-sky-900/50 dark:from-slate-950/90 dark:via-slate-950/90 dark:to-sky-950/30',
+    glow: 'bg-sky-300/30 dark:bg-sky-500/12',
+    text: 'text-sky-700 dark:text-sky-300',
+    pill: 'bg-sky-100 text-sky-700 dark:bg-sky-500/15 dark:text-sky-200',
+    wash: 'bg-sky-500/10',
+  },
+  helixir: {
+    panel:
+      'border-emerald-200 bg-gradient-to-br from-emerald-50 via-white to-teal-50/70 dark:border-emerald-900/50 dark:from-slate-950/90 dark:via-slate-950/90 dark:to-emerald-950/30',
+    glow: 'bg-emerald-300/30 dark:bg-emerald-500/12',
+    text: 'text-emerald-700 dark:text-emerald-300',
+    pill: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-200',
+    wash: 'bg-emerald-500/10',
+  },
+  personal: {
+    panel:
+      'border-amber-200 bg-gradient-to-br from-amber-50 via-white to-orange-50/70 dark:border-amber-900/50 dark:from-slate-950/90 dark:via-slate-950/90 dark:to-amber-950/30',
+    glow: 'bg-amber-300/30 dark:bg-amber-500/12',
+    text: 'text-amber-700 dark:text-amber-300',
+    pill: 'bg-amber-100 text-amber-700 dark:bg-amber-500/15 dark:text-amber-200',
+    wash: 'bg-amber-500/10',
+  },
+};
+
+function useSectionStickyProgress(top = 80, distance = 120) {
+  const sectionRef = useRef<HTMLElement>(null);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -20,19 +57,11 @@ function useStickyProgress(top = 80, distance = 120) {
     const update = () => {
       frame = 0;
 
-      const element = ref.current;
-      if (!element) return;
+      const section = sectionRef.current;
+      if (!section) return;
 
-      const rect = element.getBoundingClientRect();
-      if (initialDocumentTopRef.current === null || rect.top > top) {
-        initialDocumentTopRef.current = rect.top + window.scrollY;
-      }
-
-      const stickyStart = initialDocumentTopRef.current - top;
-      const next = Math.min(
-        1,
-        Math.max(0, (window.scrollY - stickyStart) / distance)
-      );
+      const sectionTop = section.getBoundingClientRect().top;
+      const next = Math.min(1, Math.max(0, (top - sectionTop) / distance));
 
       setProgress((current) =>
         Math.abs(current - next) > 0.01 ? next : current
@@ -56,7 +85,7 @@ function useStickyProgress(top = 80, distance = 120) {
     };
   }, [top, distance]);
 
-  return { ref, progress };
+  return { sectionRef, progress };
 }
 
 function ProjectCategory({
@@ -64,26 +93,33 @@ function ProjectCategory({
   caption,
   description,
   link = undefined,
+  tone,
+  progress,
 }: {
   title: string;
   caption: string;
   description: ReactNode;
+  tone: ProjectTone;
+  progress: number;
   link?: {
     title: string;
     href: string;
   };
 }) {
-  const { ref, progress } = useStickyProgress(72, 56);
+  const styles = projectToneStyles[tone];
   const detailOpacity = 1 - progress;
-  const compactHeight = 76;
-  const expandedHeight = link ? 360 : 240;
+  const compactHeight = 58;
+  const expandedHeight = link ? 284 : 220;
   const containerHeight =
     expandedHeight - (expandedHeight - compactHeight) * progress;
-  const titleScale = 1 - progress * 0.28;
+  const titleScale = 1 - progress * 0.45;
+  const panelOpacity = detailOpacity;
+  const fullBleedOpacity = progress * 0.9;
+  const glassBlur = 3 + detailOpacity * 1.5 + progress * 9;
+  const headerPaddingY = 10 * detailOpacity;
 
   return (
     <div
-      ref={ref}
       className={clsx(
         'content-wrapper sticky top-16 z-30 mb-4 py-2',
         'md:top-20 md:mb-10'
@@ -94,32 +130,48 @@ function ProjectCategory({
         style={{ height: `${containerHeight}px` }}
       >
         <div
+          aria-hidden="true"
           className={clsx(
-            'relative z-10 overflow-hidden rounded-[1.4rem] px-4 shadow-lg backdrop-blur',
+            'pointer-events-none absolute left-1/2 top-0 h-full w-screen -translate-x-1/2 overflow-hidden border-y shadow-sm',
+            styles.panel
+          )}
+          style={{
+            opacity: fullBleedOpacity,
+            WebkitBackdropFilter: `blur(${glassBlur}px)`,
+            backdropFilter: `blur(${glassBlur}px)`,
+          }}
+        />
+        <div
+          className={clsx(
+            'relative z-10 flex flex-col justify-center overflow-hidden rounded-[1.4rem] px-4 shadow-sm',
             'md:rounded-[2rem] md:px-8 lg:px-10'
           )}
           style={{
             height: `${containerHeight}px`,
-            paddingTop: `${20 - progress * 8}px`,
-            paddingBottom: `${20 - progress * 8}px`,
+            paddingTop: `${8 + headerPaddingY}px`,
+            paddingBottom: `${8 + headerPaddingY}px`,
             boxShadow: `0 ${18 * detailOpacity}px ${
               36 * detailOpacity
-            }px rgba(15, 23, 42, ${0.11 * detailOpacity})`,
+            }px rgba(15, 23, 42, ${0.06 * detailOpacity})`,
           }}
         >
           <div
             aria-hidden="true"
             className={clsx(
               'absolute inset-0 rounded-[1.4rem] border md:rounded-[2rem]',
-              'border-accent-200 from-accent-50 to-accent-100 dark:border-accent-900/60 dark:from-accent-950/50 dark:to-accent-950/40 bg-gradient-to-br via-white dark:via-slate-950'
+              styles.panel
             )}
-            style={{ opacity: detailOpacity }}
+            style={{
+              opacity: panelOpacity,
+              WebkitBackdropFilter: `blur(${glassBlur}px)`,
+              backdropFilter: `blur(${glassBlur}px)`,
+            }}
           />
           <div
             aria-hidden="true"
             className={clsx(
               'absolute right-0 top-0 h-32 w-32 -translate-y-8 translate-x-8 rounded-full blur-3xl',
-              'bg-accent-300/45 dark:bg-accent-500/20'
+              styles.glow
             )}
             style={{ opacity: detailOpacity }}
           />
@@ -135,7 +187,7 @@ function ProjectCategory({
               className={clsx(
                 'mb-4 text-xs font-black uppercase tracking-[0.28em]',
                 'md:text-sm',
-                'text-accent-700 dark:text-accent-300'
+                styles.text
               )}
             >
               {caption}
@@ -162,7 +214,7 @@ function ProjectCategory({
               progress > 0.9 && 'pointer-events-none'
             )}
             style={{
-              maxHeight: `${260 * detailOpacity}px`,
+              maxHeight: `${140 * detailOpacity}px`,
               opacity: detailOpacity,
             }}
           >
@@ -184,7 +236,7 @@ function ProjectCategory({
                 tabIndex={progress > 0.9 ? -1 : undefined}
                 className={clsx(
                   'mt-5 inline-flex max-w-full rounded-full px-4 py-2 text-sm font-black uppercase tracking-[0.12em]',
-                  'bg-accent-100 text-accent-700 dark:bg-accent-500/15 dark:text-accent-200'
+                  styles.pill
                 )}
               >
                 {link.title}
@@ -214,11 +266,14 @@ function ProjectSection({
     title: string;
     href: string;
   };
-  tone: 'professional' | 'helixir' | 'personal';
+  tone: ProjectTone;
   children: ReactNode;
 }) {
+  const { sectionRef, progress } = useSectionStickyProgress(72, 56);
+
   return (
     <section
+      ref={sectionRef}
       id={id}
       className={clsx('relative mt-20 scroll-mt-28')}
       data-project-tone={tone}
@@ -227,7 +282,7 @@ function ProjectSection({
         aria-hidden="true"
         className={clsx(
           'pointer-events-none absolute left-1/2 top-0 -z-10 h-full min-h-[900px] w-screen -translate-x-1/2 opacity-70 blur-3xl transition-colors',
-          'bg-accent-500/10'
+          projectToneStyles[tone].wash
         )}
       />
       <ProjectCategory
@@ -235,6 +290,8 @@ function ProjectSection({
         caption={caption}
         description={description}
         link={link}
+        tone={tone}
+        progress={progress}
       />
       {children}
     </section>
@@ -246,7 +303,7 @@ function ProjectQuickLinks() {
     title: string;
     caption: string;
     href: string;
-    tone: 'professional' | 'helixir' | 'personal';
+    tone: ProjectTone;
   }> = [
     {
       title: 'Company & Client Work',
@@ -285,54 +342,58 @@ function ProjectQuickLinks() {
           Jump to section
         </p>
         <div className={clsx('grid gap-2', 'md:grid-cols-3')}>
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={clsx(
-                'group relative overflow-hidden rounded-xl border px-3 py-3 transition',
-                'hover:-translate-y-0.5 hover:shadow-md',
-                'border-accent-200 from-accent-50 to-accent-100 dark:border-accent-900/60 dark:from-accent-950/50 dark:to-accent-950/40 bg-gradient-to-br via-white dark:via-slate-950'
-              )}
-            >
-              <div
+          {links.map((link) => {
+            const styles = projectToneStyles[link.tone];
+
+            return (
+              <a
+                key={link.href}
+                href={link.href}
                 className={clsx(
-                  'absolute right-0 top-0 h-16 w-16 -translate-y-6 translate-x-6 rounded-full blur-2xl transition group-hover:scale-125',
-                  'bg-accent-300/45 dark:bg-accent-500/20'
-                )}
-              />
-              <p
-                className={clsx(
-                  'relative mb-2 text-xs font-black uppercase tracking-[0.18em]',
-                  'text-accent-700 dark:text-accent-300'
+                  'group relative overflow-hidden rounded-xl border px-3 py-3 transition',
+                  'hover:-translate-y-0.5 hover:shadow-md',
+                  styles.panel
                 )}
               >
-                {link.caption}
-              </p>
-              <div
-                className={clsx(
-                  'relative flex items-center justify-between gap-4'
-                )}
-              >
-                <h2
+                <div
                   className={clsx(
-                    'text-base font-black text-slate-800 md:text-lg',
-                    'dark:text-white'
+                    'absolute right-0 top-0 h-16 w-16 -translate-y-6 translate-x-6 rounded-full blur-2xl transition group-hover:scale-125',
+                    styles.glow
+                  )}
+                />
+                <p
+                  className={clsx(
+                    'relative mb-2 text-xs font-black uppercase tracking-[0.18em]',
+                    styles.text
                   )}
                 >
-                  {link.title}
-                </h2>
-                <span
+                  {link.caption}
+                </p>
+                <div
                   className={clsx(
-                    'flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-black transition group-hover:translate-y-0.5',
-                    'bg-accent-100 text-accent-700 dark:bg-accent-500/15 dark:text-accent-200'
+                    'relative flex items-center justify-between gap-4'
                   )}
                 >
-                  ↓
-                </span>
-              </div>
-            </a>
-          ))}
+                  <h2
+                    className={clsx(
+                      'text-base font-black text-slate-800 md:text-lg',
+                      'dark:text-white'
+                    )}
+                  >
+                    {link.title}
+                  </h2>
+                  <span
+                    className={clsx(
+                      'flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-black transition group-hover:translate-y-0.5',
+                      styles.pill
+                    )}
+                  >
+                    ↓
+                  </span>
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
     </div>
@@ -372,7 +433,7 @@ function ProjectShowcase({
   return (
     <div
       className={clsx(
-        'background-grid background-grid--fade-out border-divider-light mt-20 border-t pt-[14px]',
+        'background-grid background-grid--fade-out border-divider-light mt-10 border-t pt-[14px]',
         'dark:border-divider-dark'
       )}
     >
@@ -451,7 +512,7 @@ function HelixirProjectCards() {
               className={clsx(
                 'bg-accent-100 text-accent-700 mt-5 inline-flex rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.14em] transition',
                 'hover:bg-accent-200 hover:-translate-y-0.5 hover:shadow-md',
-                'dark:bg-accent-500/15 dark:text-accent-200 dark:hover:bg-accent-500/25'
+                'dark:border-accent-300/35 dark:bg-accent-400/25 dark:shadow-accent-950/20 dark:hover:bg-accent-400/35 dark:border dark:text-white'
               )}
             >
               Learn More

@@ -673,6 +673,73 @@ export function OpenAiIcon(props: ComponentProps<'svg'>) {
   );
 }
 
+export function ClaudeCodeIcon(props: ComponentProps<'svg'>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      role="img"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <title>Claude Code</title>
+      <path d="M5 7.5 1.75 12 5 16.5M19 7.5 22.25 12 19 16.5" strokeWidth="2" />
+      <path d="M9.75 17.25 14.25 6.75" strokeWidth="2.25" />
+      <path
+        d="M7.75 4.75c1.24-.72 2.66-1.08 4.25-1.08 4.6 0 8.33 3.73 8.33 8.33S16.6 20.33 12 20.33 3.67 16.6 3.67 12c0-1.59.36-3.01 1.08-4.25"
+        strokeWidth="1.35"
+        opacity="0.78"
+      />
+    </svg>
+  );
+}
+
+export function HermesAgentIcon(props: ComponentProps<'svg'>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      role="img"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <title>Hermes Agent by Nous Research</title>
+      <path
+        d="M4.25 17.75c2.25-3.35 4.83-5.02 7.75-5.02s5.5 1.67 7.75 5.02"
+        strokeWidth="1.65"
+      />
+      <path d="M7.35 12.15V6.4M16.65 12.15V6.4M7.35 9.15h9.3" strokeWidth="2" />
+      <path
+        d="M8.3 4.7 12 2.45l3.7 2.25M8.3 19.3 12 21.55l3.7-2.25"
+        strokeWidth="1.5"
+      />
+      <circle cx="12" cy="12.7" r="1.45" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function LinearIcon(props: ComponentProps<'svg'>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      role="img"
+      fill="currentColor"
+      {...props}
+    >
+      <title>Linear</title>
+      <path d="M4.2 13.62 10.38 7.45a.97.97 0 0 1 1.37 1.37l-6.18 6.17a8.02 8.02 0 0 1-1.37-1.37Zm2.18 2.18 7.42-7.42a.97.97 0 1 1 1.37 1.37l-7.42 7.42a8.05 8.05 0 0 1-1.37-1.37Zm2.56 1.8 6.66-6.66a.97.97 0 0 1 1.37 1.37l-5.25 5.25A8.1 8.1 0 0 1 8.94 17.6Z" />
+      <path d="M12 2.25A9.75 9.75 0 1 0 21.75 12 9.76 9.76 0 0 0 12 2.25Zm0 1.8A7.95 7.95 0 0 1 19.95 12 7.95 7.95 0 0 1 12 19.95 7.95 7.95 0 0 1 4.05 12 7.95 7.95 0 0 1 12 4.05Z" />
+    </svg>
+  );
+}
+
 export function NextJsIcon(props: ComponentProps<'svg'>) {
   return (
     <svg

@@ -7,7 +7,7 @@ const LOCAL_STORAGE_KEY = 'theme';
 function useTheme() {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useNextThemes();
-  const userTheme = useLocalStorageState(LOCAL_STORAGE_KEY, {
+  const [userTheme] = useLocalStorageState(LOCAL_STORAGE_KEY, {
     defaultValue: 'system',
   });
 
@@ -17,7 +17,7 @@ function useTheme() {
 
   return {
     theme: mounted
-      ? resolvedTheme
+      ? resolvedTheme ?? userTheme
       : userTheme === undefined
       ? 'system'
       : userTheme,

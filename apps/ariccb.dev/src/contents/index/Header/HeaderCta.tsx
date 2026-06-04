@@ -37,18 +37,7 @@ function ButtonContactMe() {
 }
 
 function ChangeColor() {
-  return (
-    <button
-      type="button"
-      className={clsx(
-        'button button--solid',
-        'shadow',
-        'md:button--big md:my-0 md:inline-block'
-      )}
-    >
-      <AccentDemo />
-    </button>
-  );
+  return <AccentDemo />;
 }
 
 function ButtonResume() {
