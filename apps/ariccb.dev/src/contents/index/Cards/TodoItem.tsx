@@ -78,7 +78,7 @@ function TodoItem({
       <div
         aria-hidden="true"
         className={clsx(
-          'from-accent-400 mb-5 h-1.5 w-24 rounded-full bg-gradient-to-r via-orange-300 to-transparent'
+          'from-accent-400 via-accent-300 mb-5 h-1.5 w-24 rounded-full bg-gradient-to-r to-transparent'
         )}
       />
       <div
@@ -106,7 +106,7 @@ function TodoItem({
             className={clsx(
               'animate-[tag-pop_560ms_cubic-bezier(.2,.8,.2,1)_both] rounded-full border px-3.5 py-2 uppercase tracking-[0.08em]',
               'border-accent-300/70 bg-accent-100 text-accent-900 shadow-accent-900/5 shadow-sm',
-              'dark:border-accent-400/25 dark:bg-accent-500/15 dark:text-amber-100',
+              'dark:border-accent-400/25 dark:bg-accent-500/15 dark:text-accent-100',
               'motion-reduce:animate-none',
               tagDelayClasses[index]
             )}

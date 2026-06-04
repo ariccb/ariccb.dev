@@ -4,7 +4,7 @@ import SectionTitle from '@/components/sections/SectionTitle';
 
 function Curious() {
   return (
-    <header className={clsx('mb-8')} data-accent="amber">
+    <header className={clsx('mb-8')}>
       <SectionTitle
         title="Insatiable Desire To Learn and Improve."
         caption="Curious and Self-Motivated"

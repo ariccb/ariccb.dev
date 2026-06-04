@@ -59,7 +59,7 @@ function ButtonResume() {
       href="/assets/resumes/Aric_Crosson_Bouwers_-_2026-06-03_Resume.pdf"
       download
       className={clsx(
-        'button button--ghost px-2 text-amber-600',
+        'button button--ghost text-accent-600 px-2',
         'md:button--big md:px-2'
       )}
     >

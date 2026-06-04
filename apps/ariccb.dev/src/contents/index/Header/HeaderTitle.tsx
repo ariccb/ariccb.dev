@@ -99,8 +99,8 @@ function HeaderTitle() {
             that create{' '}
             <strong
               className={clsx(
-                'font-bold lowercase text-yellow-600',
-                'dark:text-yellow-300'
+                'text-accent-600 font-bold lowercase',
+                'dark:text-accent-400'
               )}
             >
               value
@@ -111,8 +111,8 @@ function HeaderTitle() {
             is the{' '}
             <strong
               className={clsx(
-                'font-bold lowercase text-yellow-600',
-                'dark:text-yellow-300'
+                'text-accent-600 font-bold lowercase',
+                'dark:text-accent-400'
               )}
             >
               key

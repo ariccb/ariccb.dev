@@ -99,7 +99,7 @@ function WhoIAm() {
 
   return (
     <>
-      <header className={clsx('mb-8')} data-accent="amber">
+      <header className={clsx('mb-8')}>
         <SectionTitle
           title="Let Me Show You A Little Bit About Me"
           caption="Who I Am + Soft Skills"
