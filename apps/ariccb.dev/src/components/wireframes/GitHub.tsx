@@ -109,7 +109,7 @@ function GitHubWireframe({
         <div className={clsx('-mb-[2px] flex h-12')}>
           <div
             className={clsx(
-              'flex items-center gap-1 border-b-[3px] border-amber-400 px-6 dark:border-amber-900'
+              'border-accent-400 dark:border-accent-900 flex items-center gap-1 border-b-[3px] px-6'
             )}
           >
             <SkeletonSm />

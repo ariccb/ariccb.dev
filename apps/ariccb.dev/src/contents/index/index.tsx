@@ -24,56 +24,56 @@ const strengthCards = [
     title: 'Relentless Learner',
     desc: "Curiosity fuels my never-ending quest for knowledge. I'm always exploring new techniques, tools, and perspectives.",
     icon: SparklesIcon,
-    color: 'bg-amber-300 dark:bg-amber-700',
+    color: 'bg-accent-300 dark:bg-accent-700',
     layout: 'lg:col-span-2',
   },
   {
     title: 'Team Player · Natural Leader',
     desc: 'Working with others, solving problems, and building strong relationships are how I enjoy working. I quickly earn trust, and I build up those around me so we can all succeed.',
     icon: HeartIcon,
-    color: 'bg-amber-400 dark:bg-amber-800',
+    color: 'bg-accent-400 dark:bg-accent-800',
     layout: 'lg:col-span-2',
   },
   {
     title: 'Workflow Architect',
     desc: 'I like turning ambiguous workflows into clear systems: intake, planning, implementation, review, and feedback loops that teams can trust.',
     icon: ClipboardIcon,
-    color: 'bg-amber-500 dark:bg-amber-900',
+    color: 'bg-accent-500 dark:bg-accent-900',
     layout: 'lg:col-span-2',
   },
   {
     title: 'Authentic · Genuine',
     desc: 'I have a transparent communication style that prioritizes being true to self and openly talking about topics with no mask on.',
     icon: QuoteIcon,
-    color: 'bg-orange-400 dark:bg-orange-800',
+    color: 'bg-accent-400 dark:bg-accent-800',
     layout: 'lg:col-span-2',
   },
   {
     title: 'Product-Minded Shipper',
     desc: 'I care about the path from idea to useful product: crisp scope, fast feedback, clean tradeoffs, and shipping the version people can actually use.',
     icon: CalendarIcon,
-    color: 'bg-orange-500 dark:bg-orange-900',
+    color: 'bg-accent-500 dark:bg-accent-900',
     layout: 'lg:col-span-2',
   },
   {
     title: 'Knowledge Systems Thinker',
     desc: 'I connect notes, tasks, docs, context, and team memory into operating systems that make better work easier to repeat.',
     icon: DocumentIcon,
-    color: 'bg-orange-600 dark:bg-orange-950',
+    color: 'bg-accent-600 dark:bg-accent-950',
     layout: 'lg:col-span-2',
   },
   {
     title: 'Design Minded',
     desc: 'I pay close attention to how products feel in use: hierarchy, rhythm, transitions, information density, and the path from first impression to confident action.',
     icon: EyeIcon,
-    color: 'bg-orange-700 dark:bg-orange-950',
+    color: 'bg-accent-700 dark:bg-accent-950',
     layout: 'lg:col-span-2',
   },
   {
     title: 'Attentive to Detail',
     desc: 'Writing well-organized, tested, and maintainable code is a top priority. I choose the hard path now when it makes tomorrow easier.',
     icon: CodeIcon,
-    color: 'bg-orange-800 dark:bg-orange-950',
+    color: 'bg-accent-800 dark:bg-accent-950',
     layout: 'lg:col-span-2',
   },
 ];
@@ -84,21 +84,21 @@ const nextLinks = [
     eyebrow: 'see the builds',
     desc: 'Portfolio work, AI systems, client projects, and product experiments.',
     href: '/projects',
-    accent: 'from-orange-400 to-amber-300',
+    accent: 'from-accent-500 to-accent-300',
   },
   {
     title: 'Skills & Tools',
     eyebrow: 'inspect the stack',
     desc: 'The languages, frameworks, AI workflows, and tools I use to ship.',
     href: '/work/skills-and-tools',
-    accent: 'from-sky-400 to-cyan-300',
+    accent: 'from-accent-500 to-accent-300',
   },
   {
     title: 'Experience',
     eyebrow: 'trace the path',
     desc: 'Recent roles, systems shipped, and the work behind the resume.',
     href: '/work/experience',
-    accent: 'from-violet-400 to-fuchsia-300',
+    accent: 'from-accent-500 to-accent-300',
   },
 ];
 
@@ -107,23 +107,23 @@ function FeaturedCardSection() {
     <div className={clsx('content-wrapper')}>
       <div
         className={clsx(
-          'relative overflow-hidden rounded-[2rem] border border-amber-200/60 bg-gradient-to-br from-white via-amber-50/40 to-orange-50 p-3 shadow-sm',
-          'dark:border-amber-900/50 dark:from-slate-950 dark:via-slate-950 dark:to-amber-950/20',
+          'border-accent-200/60 via-accent-50/40 to-accent-100 relative overflow-hidden rounded-[2rem] border bg-gradient-to-br from-white p-3 shadow-sm',
+          'dark:border-accent-900/50 dark:to-accent-950/20 dark:from-slate-950 dark:via-slate-950',
           'md:p-4 lg:p-6'
         )}
       >
         <div
           aria-hidden="true"
           className={clsx(
-            'absolute -right-20 -top-24 h-64 w-64 rounded-full bg-amber-300/30 blur-3xl',
-            'dark:bg-amber-500/10'
+            'bg-accent-300/30 absolute -right-20 -top-24 h-64 w-64 rounded-full blur-3xl',
+            'dark:bg-accent-500/10'
           )}
         />
         <div
           aria-hidden="true"
           className={clsx(
-            'absolute -bottom-28 left-1/3 h-56 w-56 rounded-full bg-violet-300/20 blur-3xl',
-            'dark:bg-violet-500/10'
+            'bg-accent-300/20 absolute -bottom-28 left-1/3 h-56 w-56 rounded-full blur-3xl',
+            'dark:bg-accent-500/10'
           )}
         />
         <div
@@ -168,16 +168,14 @@ function ExploreNextSection() {
       >
         <div
           aria-hidden="true"
-          className={clsx(
-            'absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(251,146,60,0.18),transparent_34%),radial-gradient(circle_at_82%_16%,rgba(56,189,248,0.16),transparent_32%),radial-gradient(circle_at_52%_100%,rgba(168,85,247,0.14),transparent_36%)]'
-          )}
+          className={clsx('bg-accent-500/10 absolute inset-0')}
         />
         <div className={clsx('relative')}>
           <div className={clsx('mx-auto max-w-2xl text-center')}>
             <p
               className={clsx(
-                'mb-3 text-xs font-black uppercase tracking-[0.28em] text-orange-600',
-                'dark:text-orange-300'
+                'text-accent-600 mb-3 text-xs font-black uppercase tracking-[0.28em]',
+                'dark:text-accent-300'
               )}
             >
               Keep exploring
@@ -208,8 +206,8 @@ function ExploreNextSection() {
             aria-hidden="true"
             viewBox="0 0 760 120"
             className={clsx(
-              'mx-auto my-8 hidden h-24 max-w-4xl overflow-visible text-orange-400',
-              'motion-reduce:hidden dark:text-orange-300 md:block'
+              'text-accent-400 mx-auto my-8 hidden h-24 max-w-4xl overflow-visible',
+              'dark:text-accent-300 motion-reduce:hidden md:block'
             )}
           >
             <path
@@ -304,9 +302,9 @@ function ExploreNextSection() {
                 </p>
                 <div
                   className={clsx(
-                    'mt-5 inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-2 text-sm font-black text-orange-600 transition',
-                    'group-hover:translate-x-1 group-hover:bg-orange-100',
-                    'dark:bg-slate-800 dark:text-orange-300 dark:group-hover:bg-orange-950/50'
+                    'text-accent-600 mt-5 inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-2 text-sm font-black transition',
+                    'group-hover:bg-accent-100 group-hover:translate-x-1',
+                    'dark:text-accent-300 dark:group-hover:bg-accent-950/50 dark:bg-slate-800'
                   )}
                 >
                   Go this way

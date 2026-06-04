@@ -62,7 +62,7 @@ function NpmWireframe({
             />
           </div>
           <div
-            className={clsx('flex gap-2 border-b-2 border-orange-400 p-3 px-4')}
+            className={clsx('border-accent-400 flex gap-2 border-b-2 p-3 px-4')}
           >
             <SkeletonSm />
             <SkeletonSm w={54} />

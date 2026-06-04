@@ -62,9 +62,8 @@ function QuickAccess() {
             </button>
           </div>
           <div
-            data-accent="fuchsia"
             className={clsx(
-              'fixed left-2 right-2 bottom-0 top-20 flex flex-col gap-6',
+              'fixed bottom-0 left-2 right-2 top-20 flex flex-col gap-6',
               'sm:left-auto sm:right-6 sm:top-24 sm:w-[320px]'
             )}
           >
@@ -79,7 +78,7 @@ function QuickAccess() {
             </div>
             <div
               className={clsx(
-                'fixed left-8 bottom-10 hidden w-[320px]',
+                'fixed bottom-10 left-8 hidden w-[320px]',
                 'md:block'
               )}
             >

@@ -64,7 +64,6 @@ function ProjectCategory({
   caption,
   description,
   link = undefined,
-  tone,
 }: {
   title: string;
   caption: string;
@@ -73,7 +72,6 @@ function ProjectCategory({
     title: string;
     href: string;
   };
-  tone: 'professional' | 'helixir' | 'personal';
 }) {
   const { ref, progress } = useStickyProgress(72, 56);
   const detailOpacity = 1 - progress;
@@ -113,12 +111,7 @@ function ProjectCategory({
             aria-hidden="true"
             className={clsx(
               'absolute inset-0 rounded-[1.4rem] border md:rounded-[2rem]',
-              tone === 'professional' &&
-                'border-sky-200 bg-gradient-to-br from-sky-50 via-white to-slate-100 dark:border-sky-900/60 dark:from-sky-950/50 dark:via-slate-950 dark:to-slate-900',
-              tone === 'helixir' &&
-                'border-amber-200 bg-gradient-to-br from-amber-50 via-white to-orange-100 dark:border-amber-900/60 dark:from-amber-950/50 dark:via-slate-950 dark:to-orange-950/40',
-              tone === 'personal' &&
-                'border-violet-200 bg-gradient-to-br from-violet-50 via-white to-fuchsia-100 dark:border-violet-900/60 dark:from-violet-950/50 dark:via-slate-950 dark:to-fuchsia-950/40'
+              'border-accent-200 from-accent-50 to-accent-100 dark:border-accent-900/60 dark:from-accent-950/50 dark:to-accent-950/40 bg-gradient-to-br via-white dark:via-slate-950'
             )}
             style={{ opacity: detailOpacity }}
           />
@@ -126,9 +119,7 @@ function ProjectCategory({
             aria-hidden="true"
             className={clsx(
               'absolute right-0 top-0 h-32 w-32 -translate-y-8 translate-x-8 rounded-full blur-3xl',
-              tone === 'professional' && 'bg-sky-300/40 dark:bg-sky-500/20',
-              tone === 'helixir' && 'bg-amber-300/50 dark:bg-amber-500/20',
-              tone === 'personal' && 'bg-violet-300/50 dark:bg-violet-500/20'
+              'bg-accent-300/45 dark:bg-accent-500/20'
             )}
             style={{ opacity: detailOpacity }}
           />
@@ -144,9 +135,7 @@ function ProjectCategory({
               className={clsx(
                 'mb-4 text-xs font-black uppercase tracking-[0.28em]',
                 'md:text-sm',
-                tone === 'professional' && 'text-sky-700 dark:text-sky-300',
-                tone === 'helixir' && 'text-amber-700 dark:text-amber-300',
-                tone === 'personal' && 'text-violet-700 dark:text-violet-300'
+                'text-accent-700 dark:text-accent-300'
               )}
             >
               {caption}
@@ -195,12 +184,7 @@ function ProjectCategory({
                 tabIndex={progress > 0.9 ? -1 : undefined}
                 className={clsx(
                   'mt-5 inline-flex max-w-full rounded-full px-4 py-2 text-sm font-black uppercase tracking-[0.12em]',
-                  tone === 'professional' &&
-                    'dark:bg-sky-500/15 bg-sky-100 text-sky-700 dark:text-sky-200',
-                  tone === 'helixir' &&
-                    'dark:bg-amber-500/15 bg-amber-100 text-amber-700 dark:text-amber-200',
-                  tone === 'personal' &&
-                    'dark:bg-violet-500/15 bg-violet-100 text-violet-700 dark:text-violet-200'
+                  'bg-accent-100 text-accent-700 dark:bg-accent-500/15 dark:text-accent-200'
                 )}
               >
                 {link.title}
@@ -234,17 +218,16 @@ function ProjectSection({
   children: ReactNode;
 }) {
   return (
-    <section id={id} className={clsx('relative mt-20 scroll-mt-28')}>
+    <section
+      id={id}
+      className={clsx('relative mt-20 scroll-mt-28')}
+      data-project-tone={tone}
+    >
       <div
         aria-hidden="true"
         className={clsx(
           'pointer-events-none absolute left-1/2 top-0 -z-10 h-full min-h-[900px] w-screen -translate-x-1/2 opacity-70 blur-3xl transition-colors',
-          tone === 'professional' &&
-            'bg-[radial-gradient(circle_at_50%_12%,rgba(14,165,233,0.13),transparent_38%),linear-gradient(180deg,rgba(14,165,233,0.05),transparent_62%)]',
-          tone === 'helixir' &&
-            'bg-[radial-gradient(circle_at_50%_12%,rgba(245,158,11,0.15),transparent_38%),linear-gradient(180deg,rgba(251,146,60,0.06),transparent_62%)]',
-          tone === 'personal' &&
-            'bg-[radial-gradient(circle_at_50%_12%,rgba(168,85,247,0.14),transparent_38%),linear-gradient(180deg,rgba(217,70,239,0.05),transparent_62%)]'
+          'bg-accent-500/10'
         )}
       />
       <ProjectCategory
@@ -252,7 +235,6 @@ function ProjectSection({
         caption={caption}
         description={description}
         link={link}
-        tone={tone}
       />
       {children}
     </section>
@@ -310,34 +292,19 @@ function ProjectQuickLinks() {
               className={clsx(
                 'group relative overflow-hidden rounded-xl border px-3 py-3 transition',
                 'hover:-translate-y-0.5 hover:shadow-md',
-                link.tone === 'professional' &&
-                  'border-sky-200 bg-gradient-to-br from-sky-50 via-white to-slate-100 dark:border-sky-900/60 dark:from-sky-950/50 dark:via-slate-950 dark:to-slate-900',
-                link.tone === 'helixir' &&
-                  'border-amber-200 bg-gradient-to-br from-amber-50 via-white to-orange-100 dark:border-amber-900/60 dark:from-amber-950/50 dark:via-slate-950 dark:to-orange-950/40',
-                link.tone === 'personal' &&
-                  'border-violet-200 bg-gradient-to-br from-violet-50 via-white to-fuchsia-100 dark:border-violet-900/60 dark:from-violet-950/50 dark:via-slate-950 dark:to-fuchsia-950/40'
+                'border-accent-200 from-accent-50 to-accent-100 dark:border-accent-900/60 dark:from-accent-950/50 dark:to-accent-950/40 bg-gradient-to-br via-white dark:via-slate-950'
               )}
             >
               <div
                 className={clsx(
                   'absolute right-0 top-0 h-16 w-16 -translate-y-6 translate-x-6 rounded-full blur-2xl transition group-hover:scale-125',
-                  link.tone === 'professional' &&
-                    'bg-sky-300/40 dark:bg-sky-500/20',
-                  link.tone === 'helixir' &&
-                    'bg-amber-300/50 dark:bg-amber-500/20',
-                  link.tone === 'personal' &&
-                    'bg-violet-300/50 dark:bg-violet-500/20'
+                  'bg-accent-300/45 dark:bg-accent-500/20'
                 )}
               />
               <p
                 className={clsx(
                   'relative mb-2 text-xs font-black uppercase tracking-[0.18em]',
-                  link.tone === 'professional' &&
-                    'text-sky-700 dark:text-sky-300',
-                  link.tone === 'helixir' &&
-                    'text-amber-700 dark:text-amber-300',
-                  link.tone === 'personal' &&
-                    'text-violet-700 dark:text-violet-300'
+                  'text-accent-700 dark:text-accent-300'
                 )}
               >
                 {link.caption}
@@ -358,12 +325,7 @@ function ProjectQuickLinks() {
                 <span
                   className={clsx(
                     'flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-black transition group-hover:translate-y-0.5',
-                    link.tone === 'professional' &&
-                      'dark:bg-sky-500/15 bg-sky-100 text-sky-700 dark:text-sky-200',
-                    link.tone === 'helixir' &&
-                      'dark:bg-amber-500/15 bg-amber-100 text-amber-700 dark:text-amber-200',
-                    link.tone === 'personal' &&
-                      'dark:bg-violet-500/15 bg-violet-100 text-violet-700 dark:text-violet-200'
+                    'bg-accent-100 text-accent-700 dark:bg-accent-500/15 dark:text-accent-200'
                   )}
                 >
                   ↓
@@ -465,8 +427,8 @@ function HelixirProjectCards() {
           >
             <p
               className={clsx(
-                'mb-2 text-xs font-black uppercase tracking-[0.18em] text-amber-600',
-                'dark:text-amber-400'
+                'text-accent-600 mb-2 text-xs font-black uppercase tracking-[0.18em]',
+                'dark:text-accent-400'
               )}
             >
               {project.caption}
@@ -487,9 +449,9 @@ function HelixirProjectCards() {
             <a
               href={project.href}
               className={clsx(
-                'mt-5 inline-flex rounded-full bg-amber-100 px-4 py-2 text-xs font-black uppercase tracking-[0.14em] text-amber-700 transition',
-                'hover:-translate-y-0.5 hover:bg-amber-200 hover:shadow-md',
-                'dark:bg-amber-500/15 dark:text-amber-200 dark:hover:bg-amber-500/25'
+                'bg-accent-100 text-accent-700 mt-5 inline-flex rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.14em] transition',
+                'hover:bg-accent-200 hover:-translate-y-0.5 hover:shadow-md',
+                'dark:bg-accent-500/15 dark:text-accent-200 dark:hover:bg-accent-500/25'
               )}
             >
               Learn More

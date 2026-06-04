@@ -71,7 +71,7 @@ function AppWindow({
           />
           <div
             className={clsx(
-              'h-3 w-3 rounded-full bg-amber-300',
+              'bg-accent-300 h-3 w-3 rounded-full',
               'dark:bg-slate-500'
             )}
           />

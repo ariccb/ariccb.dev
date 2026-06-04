@@ -59,10 +59,10 @@ function Navbar() {
               {/* <li> */}
               {/* <NavLink title="T.I.L" href="/today-i-learned" /> */}
               {/* </li> */}
-              <li className={clsx('lg:hidden')} data-accent="amber">
+              <li className={clsx('lg:hidden')}>
                 <NavLinkDropdown title="Work" items={workLinks} />
               </li>
-              <li className={clsx('hidden lg:block')} data-accent="amber">
+              <li className={clsx('hidden lg:block')}>
                 <NavLinkExpanded title="Work" items={workLinks} />
               </li>
             </ul>
