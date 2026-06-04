@@ -20,6 +20,18 @@ module.exports = {
           light: colors.slate[200],
           dark: colors.slate[800],
         },
+        secondary: {
+          50: 'rgb(var(--tw-secondary-50) / <alpha-value>)',
+          100: 'rgb(var(--tw-secondary-100) / <alpha-value>)',
+          200: 'rgb(var(--tw-secondary-200) / <alpha-value>)',
+          300: 'rgb(var(--tw-secondary-300) / <alpha-value>)',
+          400: 'rgb(var(--tw-secondary-400) / <alpha-value>)',
+          500: 'rgb(var(--tw-secondary-500) / <alpha-value>)',
+          600: 'rgb(var(--tw-secondary-600) / <alpha-value>)',
+          700: 'rgb(var(--tw-secondary-700) / <alpha-value>)',
+          800: 'rgb(var(--tw-secondary-800) / <alpha-value>)',
+          900: 'rgb(var(--tw-secondary-900) / <alpha-value>)',
+        },
       },
       animation: {
         'bounce-x': 'bounce-x 1s infinite',
@@ -59,7 +71,7 @@ module.exports = {
     },
     require('@headlessui/tailwindcss'),
     require('tailwindcss-accent')({
-      colors: ['amber', 'violet'],
+      colors: ['amber', 'violet', 'red', 'orange', 'green', 'pink'],
       root: 'amber',
     }),
   ],

@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 
+import AIEngineerQuote from '@/contents/index/Header/AIEngineerQuote';
 import HeaderCta from '@/contents/index/Header/HeaderCta';
 import HeaderImage from '@/contents/index/Header/HeaderImage';
 import HeaderTechStack from '@/contents/index/Header/HeaderTechStack';
@@ -10,7 +11,7 @@ function Header() {
     <header
       id="page-header"
       className={clsx(
-        'background-grid background-grid--fade-out pt-36 pb-20',
+        'background-grid background-grid--fade-out pb-20 pt-36',
         'lg:pb-28 lg:pt-52'
       )}
     >
@@ -22,7 +23,10 @@ function Header() {
           <div className={clsx('mt-6 md:mt-8')}>
             <HeaderCta />
           </div>
-          <div className={clsx('mt-20 lg:mt-36')}>
+          <div className={clsx('mt-16 md:mt-20 lg:mt-28')}>
+            <AIEngineerQuote />
+          </div>
+          <div className={clsx('mt-16 lg:mt-24')}>
             <HeaderTechStack />
           </div>
           <div

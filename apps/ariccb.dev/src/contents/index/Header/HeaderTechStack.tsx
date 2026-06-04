@@ -2,9 +2,13 @@ import clsx from 'clsx';
 import { m } from 'framer-motion';
 
 import {
+  ClaudeCodeIcon,
   FigmaIcon,
   FramerMotionIcon,
+  HermesAgentIcon,
+  LinearIcon,
   NextJsIcon,
+  OpenAiIcon,
   ReactIcon,
   TailwindCssIcon,
   TypeScriptIcon,
@@ -32,7 +36,7 @@ function HeaderTechStack() {
       </m.p>
       <m.ul
         className={clsx(
-          'flex items-center gap-3.5 text-slate-500',
+          'flex flex-wrap items-center gap-3.5 text-slate-500',
           'dark:text-slate-500'
         )}
         initial="hide"
@@ -79,6 +83,37 @@ function HeaderTechStack() {
         <m.li variants={animation}>
           <div className={clsx('transition duration-200 hover:text-[#F24E1E]')}>
             <FigmaIcon className={clsx('h-6 w-6')} />
+          </div>
+        </m.li>
+        <m.li variants={animation}>
+          <div className={clsx('h-3 w-[1px] bg-slate-300 dark:bg-slate-700')} />
+        </m.li>
+        <m.li variants={animation} title="Claude Code" aria-label="Claude Code">
+          <div className={clsx('transition duration-200 hover:text-[#D97757]')}>
+            <ClaudeCodeIcon className={clsx('h-6 w-6')} />
+          </div>
+        </m.li>
+        <m.li variants={animation} title="OpenAI" aria-label="OpenAI">
+          <div
+            className={clsx(
+              'transition duration-200 hover:text-[#10A37F] dark:hover:text-[#74AA9C]'
+            )}
+          >
+            <OpenAiIcon className={clsx('h-6 w-6')} />
+          </div>
+        </m.li>
+        <m.li
+          variants={animation}
+          title="Hermes Agent by Nous Research"
+          aria-label="Hermes Agent by Nous Research"
+        >
+          <div className={clsx('transition duration-200 hover:text-[#8B5CF6]')}>
+            <HermesAgentIcon className={clsx('h-6 w-6')} />
+          </div>
+        </m.li>
+        <m.li variants={animation} title="Linear" aria-label="Linear">
+          <div className={clsx('transition duration-200 hover:text-[#5E6AD2]')}>
+            <LinearIcon className={clsx('h-6 w-6')} />
           </div>
         </m.li>
       </m.ul>
