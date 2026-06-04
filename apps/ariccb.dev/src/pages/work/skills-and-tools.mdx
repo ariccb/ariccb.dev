@@ -11,9 +11,11 @@ import Callout from '@/components/mdx/Callout';
 
 ## Full-Stack AI Engineer
 
-I love creating software that is clean, useful, and easy to use. Lately that has meant full-stack product work paired with AI-assisted planning, review, and automation workflows.
+I love creating software that is clean, useful, and easy to use. Lately that has meant moving beyond "AI user" habits and into AI-assisted engineering systems: clarifying requests, shaping specs, carrying product context forward, giving agents the right repo knowledge, and reviewing the output before anything ships.
 
-I really enjoy creating websites with **rich UI components**, including:
+The code output has gone way up, but the judgment around the code matters more than ever. My focus is the workflow around the work: product intent, data models, architecture decisions, context engineering, review loops, and the rails that make AI-assisted engineering trustworthy.
+
+I still really enjoy creating websites with **rich UI components**, including:
 
 - **Web applications**,
 - **Dashboard layouts**,
@@ -184,7 +186,31 @@ But I still like to make simple website pages like **landing pages**. So, what t
 
 <Callout spacing={8} variant='ai'>
   <VStack spacing={12}>
-    I’m a hands-on full-stack engineer first. AI pairing is an accelerator I design and oversee—using curated prompts, context pipelines, rules, and human review gates to keep quality high without losing architectural intent or UX polish.
+    I’m a hands-on full-stack engineer first. AI pairing is an accelerator I design and oversee—using curated prompts, repo context, product intent, rules, automation, and review gates to keep quality high without losing architectural direction or UX polish.
+
+    <p style={{ marginLeft: 2, marginBottom: 8 }}>
+      <strong>Where the workflow matters most</strong>
+    </p>
+
+    <HStack spacing={8}>
+      <Label indicator={100}>Request clarification</Label>
+      <Label indicator={100}>Spec writing</Label>
+      <Label indicator={100}>Repo context enrichment</Label>
+      <Label indicator={100}>Product intent framing</Label>
+      <Label indicator={100}>Architecture decisions</Label>
+    </HStack>
+
+    <HStack spacing={8}>
+      <Label indicator={100}>Context Engineering</Label>
+      <Label indicator={100}>Prompt / Rules Frameworks</Label>
+      <Label indicator={100}>Agent Skills / Plugins</Label>
+      <Label indicator={100}>Hooks / Automations</Label>
+      <Label indicator={100}>Human Review Gates</Label>
+    </HStack>
+
+    <p style={{ marginLeft: 2, marginTop: 8, marginBottom: 8 }}>
+      If the plan is vague, the data model is wrong, or the agent misses the product intent, AI just produces more wrong code faster. The useful leverage comes from upstream clarity and downstream verification.
+    </p>
 
     <p style={{ marginLeft: 2, marginBottom: 8 }}>
       <strong>Daily tools and systems I've integrated into my workflow</strong>
@@ -192,26 +218,25 @@ But I still like to make simple website pages like **landing pages**. So, what t
 
     <HStack spacing={8}>
       <Label indicator={100}>GitHub Copilot</Label>
-      <Label indicator={100}>ChatGPT (Codex)</Label>
+      <Label indicator={100}>ChatGPT / Codex</Label>
       <Label indicator={100}>Claude Code</Label>
       <Label indicator={100}>Cursor</Label>
-      <Label indicator={100}>Repo Prompt</Label>
+      <Label indicator={100}>RepoPrompt</Label>
       <Label indicator={100}>Augment Code</Label>
       <Label indicator={100}>Hermes Agent</Label>
     </HStack>
 
     <HStack spacing={8}>
-      <Label indicator={100}>Slack automations</Label>
-      <Label indicator={100}>GitHub automations</Label>
-      <Label indicator={100}>Prompt/rules frameworks</Label>
-      <Label indicator={100}>Skills / Plugins / Hooks</Label>
-      <Label indicator={100}>Long-term memory evaluation</Label>
+      <Label indicator={100}>MCP</Label>
+      <Label indicator={100}>Linear Agents API</Label>
+      <Label indicator={100}>Slack Automations</Label>
+      <Label indicator={100}>GitHub Automations</Label>
+      <Label indicator={100}>AI Code Review Workflows</Label>
+      <Label indicator={100}>GStack QA</Label>
     </HStack>
 
     <p style={{ marginLeft: 2, marginTop: 8 }}>
-      <strong>Patterns I use</strong>: agentic planning, dedupe, enrichment, design,
-      coding, review, QA, and status loops backed by tests and human-in-the-loop
-      approvals.
+      <strong>Patterns I use</strong>: agentic planning, context loading, dedupe, enrichment, implementation, review, QA, status reporting, and automated checks—with human-in-the-loop only where judgment is actually needed.
     </p>
 
   </VStack>
@@ -219,7 +244,17 @@ But I still like to make simple website pages like **landing pages**. So, what t
 
 ---
 
-## Favourite Technologies Right Now
+## From Developer to AI Engineer
+
+A few years ago, a portfolio could mostly say “here’s the stack I use” and “here are the apps I’ve built.” That still matters, but it no longer explains the work I’m doing day to day.
+
+The bigger shift has been learning how to design the workflow around the code: how requests are clarified, how specs are shaped, how repo context gets pulled in, how agents are guided, how hallucinations are constrained, and how outputs are reviewed before they become production changes.
+
+For me, becoming a Full-Stack AI Engineer means keeping the product and architecture judgment at the center while using AI to move faster through planning, implementation, review, QA, and team communication. The leverage is not just generating code; it is building the rails that make faster output trustworthy.
+
+---
+
+## Current Favourite Tech Stack / Tools
 
 <Callout variant="js">
   TypeScript is my default for full-stack work. I design type-safe APIs, domain
@@ -233,7 +268,7 @@ But I still like to make simple website pages like **landing pages**. So, what t
 </Callout>
 
 <Callout variant="tailwind">
-  Favorite UI system: Tailwind CSS paired with shadcn/ui and Radix primitives,
+  Favourite UI system: Tailwind CSS paired with shadcn/ui and Radix primitives,
   orchestrated with TanStack Query for server state and caching. This stack lets
   me move quickly while still delivering polished, accessible UIs.
 </Callout>
